@@ -1,0 +1,21 @@
+/* PGH Cast — character select arcade + portraits pixel */
+.avatar-preview img,.mini-avatar img,.p-ava img,.c-ava img,.hs-ava img,.cast-opt img,.g-leader-row .ava img{image-rendering:pixelated}
+.cast-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:4px}
+@media(max-width:560px){.cast-grid{grid-template-columns:repeat(4,1fr)}}
+.cast-opt{position:relative;background:#0b0b1c;border:2px solid var(--line);border-radius:12px;padding:6px 4px 4px;cursor:pointer;transition:transform .1s,border-color .15s,box-shadow .15s;animation:castIn .3s ease backwards}
+.cast-opt:nth-child(2n){animation-delay:.03s}.cast-opt:nth-child(3n){animation-delay:.06s}
+@keyframes castIn{from{opacity:0;transform:translateY(6px) scale(.9)}to{opacity:1;transform:none}}
+.cast-opt img{width:100%;height:auto;display:block}
+.cast-opt .num{position:absolute;top:2px;left:5px;font-family:var(--font-mono);font-size:9px;color:var(--muted)}
+.cast-opt:hover{transform:translateY(-3px) scale(1.06);border-color:var(--cyan);box-shadow:0 0 14px rgba(34,230,255,.45);z-index:2}
+.cast-opt.selected{border-color:var(--yellow);box-shadow:0 0 0 2px rgba(255,211,25,.35),0 0 18px rgba(255,211,25,.5);animation:castSel .35s ease}
+@keyframes castSel{0%{transform:scale(.85)}55%{transform:scale(1.12)}100%{transform:scale(1)}}
+.cast-name{margin-top:8px;text-align:center;font-size:12px}
+.cast-name .font-pixel{color:var(--yellow);text-shadow:0 0 10px rgba(255,211,25,.5);font-size:12px}
+.cast-desc{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+/* microanimações de expressão (§15) */
+.expr-pop{animation:exprPop .35s ease}
+@keyframes exprPop{0%{transform:scale(.7)}55%{transform:scale(1.15)}100%{transform:scale(1)}}
+.expr-shake{animation:exprShake .4s ease}
+@keyframes exprShake{0%,100%{transform:none}25%{transform:translateX(-4px) rotate(-4deg)}75%{transform:translateX(4px) rotate(4deg)}}
+.reduced-effects .cast-opt,.reduced-effects .expr-pop,.reduced-effects .expr-shake{animation:none!important}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>PARTY GAMES HUB — Fliperama Multiplayer</title>
+<meta name="description" content="Party Games Hub: fliperama multiplayer no navegador. WordBomb, Termo Battle, Riftle, Jungle Gap e mais. Crie uma sala, chame os amigos e jogue.">
+<script src="assets/vendor/peerjs.js"></script>
+<script src="assets/vendor/lucide.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Chakra+Petch:wght@400;500;600;700&family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/arcade.css">
+<link rel="stylesheet" href="css/lobby.css">
+<link rel="stylesheet" href="css/new-games.css">
+<link rel="stylesheet" href="css/games.css">
+<link rel="stylesheet" href="css/cast.css">
+<link rel="stylesheet" href="css/daily.css">
+<link rel="stylesheet" href="css/rc1.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>">
+</head>
+<body class="crt-on">
+<canvas id="particles-canvas"></canvas>
+<div id="hall-bg" aria-hidden="true"></div>
+<div id="crt-overlay" aria-hidden="true"></div>
+<div id="noise-overlay" aria-hidden="true"></div>
+<div id="flash-overlay" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
+<div id="reaction-layer" aria-hidden="true"></div>
+<canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+<div id="app">
+  <!-- ============ BOOT ============ -->
+  <section id="screen-boot" class="screen active">
+    <div class="boot-wrap">
+      <div class="boot-cabinet">
+        <div class="boot-marquee"><span>★ PARTY GAMES HUB ★</span></div>
+        <div class="boot-screen">
+          <div class="boot-logo">👾</div>
+          <h1 class="font-pixel boot-title">PARTY GAMES<br>HUB</h1>
+          <p class="boot-sub">INSERT COIN · CHAME OS AMIGOS</p>
+          <div class="boot-bar"><div id="boot-progress"></div></div>
+          <p id="boot-status" class="boot-status">LIGANDO FLIPERAMA...</p>
+        </div>
+        <div class="boot-controls"><span class="arcade-btn red"></span><span class="arcade-btn yellow"></span><span class="arcade-btn green"></span><span class="arcade-btn blue"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROFILE ============ -->
+  <section id="screen-profile" class="screen">
+    <div class="page-shell">
+      <div class="top-hud">
+        <div class="hud-brand"><span class="hud-dot"></span><span class="font-pixel">PGH·OS v1.0</span></div>
+        <div class="hud-right">
+          <button class="icon-btn" id="btn-settings-profile" aria-label="Configurações"><i data-lucide="settings-2"></i></button>
+        </div>
+      </div>
+      <div class="profile-grid">
+        <div class="panel neon-border">
+          <div class="panel-title font-pixel" id="profile-panel-title">⌁ CREATE YOUR PLAYER</div>
+          <label class="field-label" for="profile-nickname">NICKNAME</label>
+          <input id="profile-nickname" class="arcade-input" maxlength="14" placeholder="ex: JORGE" autocomplete="off" spellcheck="false">
+          <p class="field-hint">3–14 caracteres · visível para a sala</p>
+          <label class="field-label">SELECT YOUR FIGHTER</label>
+          <div id="avatar-mode-tabs" class="style-tabs">
+            <button type="button" class="style-tab active" data-amode="cast">★ ELENCO ARCADE</button>
+            <button type="button" class="style-tab" data-amode="dice">DICEBEAR</button>
+          </div>
+          <div id="cast-wrap">
+            <div id="cast-grid" class="cast-grid"></div>
+            <div id="cast-name" class="cast-name"><span class="font-pixel" id="cast-name-txt">—</span><span id="cast-desc-txt" class="cast-desc"></span></div>
+          </div>
+          <div id="dice-wrap" class="hidden">
+            <label class="field-label">AVATAR STYLE</label>
+            <div id="avatar-style-tabs" class="style-tabs"></div>
+            <label class="field-label">ESCOLHA SEU AVATAR <span id="btn-shuffle-avatars" class="link-action">↻ embaralhar</span></label>
+            <div id="avatar-grid" class="avatar-grid"></div>
+          </div>
+          <label class="field-label">MOLDURA</label>
+          <div id="frame-grid" class="frame-grid"></div>
+          <button id="btn-create-profile" class="btn-arcade primary big w-full"><i data-lucide="gamepad-2"></i><span id="btn-create-profile-label">CONFIRMAR · START</span></button>
+        </div>
+        <div class="panel player-preview-panel">
+          <div class="panel-title font-pixel">◉ PLAYER STATION</div>
+          <div class="player-card-big">
+            <div id="avatar-preview-wrap" class="avatar-preview frame-neon"><img id="avatar-preview" alt="Avatar preview"></div>
+            <div id="preview-title" class="font-pixel preview-title">★ ROOKIE ★</div>
+            <div id="preview-nickname" class="font-pixel preview-nick">JOGADOR</div>
+            <div id="preview-level" class="preview-lv font-mono2">LV. 1</div>
+            <div class="xp-bar preview-xp"><div id="preview-xp-fill"></div></div>
+            <div id="preview-xp-text" class="xp-text font-mono2">0 / 100 XP</div>
+            <div class="preview-stats">
+              <div><span>🏆</span><b id="pv-wins">0</b><small>WINS</small></div>
+              <div><span>🔥</span><b id="pv-streak">0</b><small>BEST</small></div>
+              <div><span>🪙</span><b id="pv-tokens">100</b><small>TOKENS</small></div>
+            </div>
+            <div class="ticket-box">
+              <div class="font-pixel ticket-title">NO LOGIN · NO BS</div>
+              <p>Seu perfil vive no navegador.<br>XP, tokens e conquistas salvos localmente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOME ============ -->
+  <section id="screen-home" class="screen">
+    <div class="page-shell">
+      <div class="top-hud">
+        <div class="hud-brand"><span class="hud-dot"></span><span class="font-pixel">PARTY GAMES HUB</span></div>
+        <div class="hud-right">
+          <span id="home-clock" class="hud-clock font-mono2">00:00</span>
+          <button class="icon-btn" id="btn-trophies" aria-label="Conquistas"><i data-lucide="trophy"></i></button>
+          <button class="icon-btn" id="btn-settings" aria-label="Configurações"><i data-lucide="settings-2"></i></button>
+        </div>
+      </div>
+      <div class="hero-strip">
+        <div class="hero-left">
+          <div class="marquee font-pixel"><span>★ GAME NIGHT ★ CHAME A CALL ★ SEM LOGIN ★ 100% NAVEGADOR ★ GAME NIGHT ★ CHAME A CALL ★ SEM LOGIN ★</span></div>
+          <div class="font-pixel insert-coin">◉ INSERT COIN ◉</div>
+          <h2 class="font-pixel hero-title">TO START<br><span class="neon-pink">SOME</span> <span class="neon-cyan">CHAOS</span></h2>
+          <p class="hero-sub">O fliperama que nunca existiu. Crie uma sala, mande o código no Discord e jogue <b>WordBomb</b>, <b>Termo Battle</b>, <b>Riftle</b> e <b>Jungle Gap</b> com seus amigos — tudo sincronizado via P2P.</p>
+          <div class="hero-cta">
+            <button id="btn-create-room" class="btn-arcade primary big"><i data-lucide="plus-circle"></i><span>🕹 HOST GAME</span></button>
+            <button id="btn-join-room" class="btn-arcade secondary big"><i data-lucide="log-in"></i><span>JOIN GAME</span></button>
+          </div>
+          <div class="hero-badges">
+            <span class="badge"><i data-lucide="wifi"></i> P2P WebRTC</span>
+            <span class="badge"><i data-lucide="users"></i> 2–12 players</span>
+            <span class="badge"><i data-lucide="smartphone"></i> mobile ready</span>
+            <span class="badge"><i data-lucide="volume-2"></i> som synth</span>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="panel profile-mini-panel">
+            <div class="panel-title font-pixel">◉ PLAYER STATION <button id="btn-edit-profile" class="link-action">editar</button></div>
+            <div class="profile-mini">
+              <div id="home-avatar-wrap" class="mini-avatar frame-neon"><img id="home-avatar" alt="Avatar"></div>
+              <div class="mini-info">
+                <div id="home-nickname" class="font-pixel mini-nick">—</div>
+                <div id="home-level" class="mini-lv font-mono2">LV. 1</div>
+                <div class="xp-bar"><div id="home-xp-fill"></div></div>
+                <div id="home-xp-text" class="xp-text font-mono2">0 / 100 XP</div>
+              </div>
+            </div>
+            <div id="home-stats-row" class="mini-stats">
+              <div><span>🏆</span><b id="st-wins">0</b><small>WINS</small></div>
+              <div><span>🔥</span><b id="st-streak">0</b><small>STREAK</small></div>
+              <div><span>🪙</span><b id="st-tokens">0</b><small>TOKENS</small></div>
+              <div><span>🎮</span><b id="st-games">0</b><small>JOGOS</small></div>
+            </div>
+            <button id="btn-shop" class="btn-arcade ghost w-full"><i data-lucide="shopping-bag"></i><span>LOJA DE MOLDURAS</span></button>
+          </div>
+        </div>
+      </div>
+      <section id="daily-panel" class="daily-panel panel"></section>
+      <div class="panel-title font-pixel section-title">▚ FREE PLAY · CHOOSE ANY MACHINE</div>
+      <div id="games-preview-grid" class="machines-grid"></div>
+      <div class="how-strip">
+        <div class="how-card"><i data-lucide="plus-circle"></i><b>1 · HOST GAME</b><p>Vire o HOST. A sala ganha um código de 5 letras.</p></div>
+        <div class="how-card"><i data-lucide="send"></i><b>2 · MANDE O CÓDIGO</b><p>Cole no Discord, WhatsApp, onde for.</p></div>
+        <div class="how-card"><i data-lucide="joystick"></i><b>3 · JOGUE JUNTO</b><p>Estado sincronizado, chat e reações.</p></div>
+      </div>
+      <footer class="foot">PARTY GAMES HUB · feito pra game night · NIGHT BUILD 1.0 · <span class="font-mono2">peer: <span id="foot-peer">—</span></span></footer>
+    </div>
+  </section>
+
+  <!-- ============ LOBBY ============ -->
+  <section id="screen-lobby" class="screen">
+    <div class="page-shell lobby-shell">
+      <div class="lobby-topbar panel">
+        <button class="btn-arcade danger sm" id="btn-leave-room"><i data-lucide="door-open"></i><span>SAIR</span></button>
+        <div class="room-code-block">
+          <span class="room-label font-pixel">ROOM //</span>
+          <span id="lobby-room-code" class="font-pixel room-code">•••••</span>
+          <button class="icon-btn" id="btn-copy-code" aria-label="Copiar código"><i data-lucide="copy"></i></button>
+        </div>
+        <div class="lobby-status">
+          <span id="connection-status" class="conn-pill"><span class="pulse"></span> CONECTANDO...</span>
+          <span id="ping-display" class="font-mono2 ping">— ms</span>
+          <span id="host-badge" class="host-badge font-pixel">HOST</span>
+        </div>
+      </div>
+      <div class="lobby-grid">
+        <div class="lobby-main">
+          <div class="panel">
+            <div class="panel-title font-pixel">◉ PLAYERS · <span id="players-count">0/12</span> <span id="lobby-readystate" class="ready-hint"></span></div>
+            <div id="players-grid" class="players-grid"></div>
+          </div>
+          <div class="panel">
+            <div class="panel-title font-pixel">▚ ESCOLHA A MÁQUINA <span id="selected-game-hint" class="ready-hint"></span></div>
+            <div id="machines-grid" class="machines-grid small"></div>
+            <div id="lobby-controls" class="lobby-controls">
+              <button id="btn-ready" class="btn-arcade secondary big"><i data-lucide="check"></i><span>READY!</span></button>
+              <button id="btn-start-game" class="btn-arcade primary big hidden"><i data-lucide="play"></i><span>START GAME</span></button>
+              <button id="btn-dmode" class="btn-arcade ghost sm hidden"><span>🎲 FREE</span></button>
+              <button id="btn-mix" class="btn-arcade secondary big hidden"><span>★ DAILY MIX</span></button>
+            </div>
+            <div id="mix-panel" class="mix-panel hidden"></div>
+            <p id="lobby-tip" class="lobby-tip">HOST escolhe a máquina. Todo mundo dá READY. Mínimo 1 jogador pra testar, ideal 2+.</p>
+          </div>
+          <div class="panel">
+            <div class="panel-title font-pixel">★ HIGH SCORES · SESSÃO</div>
+            <ol id="highscores-list" class="highscores"></ol>
+          </div>
+        </div>
+        <aside class="lobby-side">
+          <div class="panel chat-panel">
+            <div class="panel-title font-pixel">✉ CHAT DA SALA</div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <div id="reactions-bar" class="reactions-bar">
+              <button data-reaction="😂">😂</button><button data-reaction="💀">💀</button><button data-reaction="🔥">🔥</button><button data-reaction="🤡">🤡</button><button data-reaction="👏">👏</button><button data-reaction="❓">❓</button>
+            </div>
+            <div id="taunt-row" class="taunt-row">
+              <button data-taunt="GG!">GG</button><button data-taunt="EZ!">EZ</button><button data-taunt="JUNGLE GAP!">JG GAP</button><button data-taunt="INT!">INT</button><button data-taunt="NO WAY!">NO WAY</button>
+            </div>
+            <div class="chat-input-row">
+              <input id="chat-input" class="arcade-input" maxlength="200" placeholder="digite e dê ENTER..." autocomplete="off">
+              <button id="btn-send-chat" class="btn-arcade secondary sm" aria-label="Enviar"><i data-lucide="send-horizontal"></i></button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <button id="btn-chat-fab" class="chat-fab" aria-label="Abrir chat"><i data-lucide="message-circle"></i><span id="chat-unread" class="chat-unread hidden">0</span></button>
+  </section>
+
+  <!-- ============ GAME ============ -->
+  <section id="screen-game" class="screen">
+    <div class="game-shell">
+      <div class="game-topbar">
+        <button class="btn-arcade danger sm" id="btn-quit-game"><i data-lucide="flag"></i><span>LOBBY</span></button>
+        <div class="game-title-block"><span id="game-name-tag" class="font-pixel game-name">WORDBOMB</span><span id="game-phase-badge" class="phase-badge">INTRO</span></div>
+        <div class="game-top-right"><span id="game-room-code" class="font-mono2">•••••</span><span id="game-ping" class="font-mono2">— ms</span></div>
+      </div>
+      <div id="game-intro" class="game-intro hidden">
+        <div id="game-intro-name" class="font-pixel intro-name">RIFTLE</div>
+        <div id="game-intro-count" class="font-pixel intro-count">3</div>
+        <div class="intro-sub font-mono2">PREPARE-SE...</div>
+      </div>
+      <div id="game-layout" class="game-layout">
+        <div id="game-root" class="game-root panel"></div>
+        <aside id="game-sidebar" class="game-sidebar panel">
+          <div class="panel-title font-pixel">★ PLACAR</div>
+          <ol id="game-score-list" class="highscores compact"></ol>
+          <div class="panel-title font-pixel side-chat-title">✉ CHAT <button id="btn-game-chat-toggle" class="link-action">abrir</button></div>
+          <div id="game-chat-mini" class="hidden">
+            <div id="game-chat-messages" class="chat-messages small"></div>
+            <div class="chat-input-row">
+              <input id="game-chat-input" class="arcade-input" maxlength="200" placeholder="chat..." autocomplete="off">
+              <button id="btn-game-send" class="btn-arcade secondary sm" aria-label="Enviar"><i data-lucide="send-horizontal"></i></button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast-root" aria-live="polite"></div>
+<div id="debug-panel" class="hidden"></div>
+
+<script src="data/portuguese-words.js"></script>
+<script src="data/wordbomb-lexicon.js"></script>
+<script src="data/termo-words.js"></script>
+<script src="data/lol-champions.js"></script>
+<script src="data/jungle-scenarios.js"></script>
+<script src="data/jungle-structures.js"></script>
+<script src="data/lane-geometry.js"></script>
+<script src="data/scenario-state-model.js"></script>
+<script src="data/characters.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/state.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/characters.js"></script>
+<script src="js/daily.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/achievements.js"></script>
+<script src="config.js"></script>
+<script src="js/multiplayer.js"></script>
+<script src="js/rooms.js"></script>
+<script src="js/game-manager.js"></script>
+<script src="js/games/wordbomb.js"></script>
+<script src="js/games/termo.js"></script>
+<script src="js/games/riftle.js"></script>
+<script src="js/games/jungle-gap.js"></script>
+<script src="js/games/party-common.js"></script>
+<script src="data/fake-questions.js"></script>
+<script src="js/games/stop.js"></script>
+<script src="js/games/fake-answer.js"></script>
+<script src="js/games/reflex-rush.js"></script>
+<script src="js/app.js"></script>
+<script src="js/diagnostics.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+{
+  "fixtures": 10,
+  "waveAbsenceCases": 45,
+  "specialStates": 21,
+  "checks": 8756,
+  "production": [
+    {
+      "id": "jg-01",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-02",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-03",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-04",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-05",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-06",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-07",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-08",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-09",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-10",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-11",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-12",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-13",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-14",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-15",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-16",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-17",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-18",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-19",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-20",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-21",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-22",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-23",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-24",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-25",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-26",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-27",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-28",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-29",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-30",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-31",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-32",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-33",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-34",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-35",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-36",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-37",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-38",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-39",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-40",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-41",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-42",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-43",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-44",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-45",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-46",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-47",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-48",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-49",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-50",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-51",
+      "result": "PASS"
+    },
+    {
+      "id": "jg-52",
+      "result": "PASS"
+    }
+  ]
+}

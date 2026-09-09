@@ -1,0 +1,72 @@
+/* PGH Daily Arcade — painel, marquee, missões, mix, podium, eventos */
+.daily-panel{margin:14px 0;overflow:hidden;border-color:rgba(255,211,25,.4);box-shadow:0 0 30px rgba(255,211,25,.12),0 18px 50px rgba(0,0,0,.45)}
+.daily-marquee{overflow:hidden;white-space:nowrap;color:var(--yellow);font-size:13px;text-shadow:0 0 12px rgba(255,211,25,.6);margin:-4px -4px 10px;display:flex}
+.daily-marquee span{display:inline-block;padding-right:8px;animation:marq 18s linear infinite}
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.daily-newflag{text-align:center;font-family:var(--font-pixel);font-size:13px;color:var(--green);text-shadow:0 0 14px rgba(57,255,106,.7);border:1px dashed rgba(57,255,106,.5);border-radius:10px;padding:10px;margin-bottom:10px;cursor:pointer;animation:flagPulse 1.2s ease-in-out infinite}
+.daily-newflag small{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-top:4px}
+@keyframes flagPulse{0%,100%{box-shadow:0 0 0 rgba(57,255,106,.0)}50%{box-shadow:0 0 22px rgba(57,255,106,.35)}}
+.daily-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:12px}
+@media(max-width:820px){.daily-grid{grid-template-columns:1fr}}
+.daily-box{background:#0b0b1c;border:1px solid var(--line);border-radius:12px;padding:12px}
+.daily-box-t{font-size:11px;color:var(--yellow);letter-spacing:1px;margin-bottom:10px;text-shadow:0 0 10px rgba(255,211,25,.5)}
+.daily-lineup{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media(max-width:520px){.daily-lineup{grid-template-columns:repeat(2,1fr)}}
+.daily-game{background:#10101f;border:1px solid var(--line);border-radius:10px;padding:8px 4px;text-align:center}
+.dg-icon{font-size:26px}.dg-name{font-size:11px;font-weight:700;margin-top:2px}
+.dg-mod{font-size:10px;color:var(--cyan);margin-top:2px}.dg-param{font-size:10px;color:var(--pink)}
+.daily-special{text-align:center;color:var(--yellow);font-weight:700;font-size:12px;margin-top:10px;text-shadow:0 0 10px rgba(255,211,25,.6)}
+.daily-bonus{margin-top:8px;font-size:12px;color:var(--muted);text-align:center}
+.daily-bonus b{color:var(--ink)}
+.daily-missions{display:flex;flex-direction:column;gap:8px}
+.mission{display:flex;gap:8px;align-items:center;background:#10101f;border:1px solid var(--line);border-radius:10px;padding:8px}
+.mission.done{border-color:rgba(57,255,106,.45)}
+.m-check{font-size:18px;color:var(--muted)}.mission.done .m-check{color:var(--green)}
+.m-body{flex:1}.m-text{font-size:12px;font-weight:600}
+.m-bar{height:6px;background:#1a1a33;border-radius:4px;margin-top:5px;overflow:hidden}
+.m-bar div{height:100%;background:linear-gradient(90deg,var(--cyan),var(--green));border-radius:4px}
+.m-rew{font-size:10px;color:var(--yellow);text-align:right;white-space:nowrap}
+.daily-score{margin-top:10px;font-size:12px;color:var(--muted);text-align:center}
+.daily-score b{color:var(--cyan)}
+.daily-spot{margin-top:8px;font-size:12px;text-align:center;color:var(--muted)}
+.daily-spot b{color:var(--green)}.daily-spot s{opacity:.6}
+.daily-reset{margin-top:8px;text-align:center;font-size:12px;color:var(--muted)}
+.daily-reset span{color:var(--yellow);font-size:14px}
+.daily-hist{display:flex;gap:6px;justify-content:center;margin-top:8px;flex-wrap:wrap}
+.hist-day{font-size:10px;font-family:var(--font-mono);color:var(--muted);background:#10101f;border:1px solid var(--line);border-radius:6px;padding:3px 7px}
+.hist-day.played{color:var(--green);border-color:rgba(57,255,106,.4)}
+/* lobby: badges + mix */
+.lobby-controls{flex-wrap:wrap}
+#btn-dmode.daily-on{border-color:var(--yellow);color:var(--yellow);box-shadow:0 0 14px rgba(255,211,25,.35)}
+.mod-badge{margin-top:6px;font-size:10px;font-weight:700;color:var(--cyan);background:rgba(34,230,255,.08);border:1px solid rgba(34,230,255,.3);border-radius:8px;padding:3px 6px;text-align:center}
+.mod-badge.applied{color:#04222a;background:var(--cyan);box-shadow:0 0 12px rgba(34,230,255,.5)}
+.mix-panel{margin-top:10px;background:#0b0b1c;border:1px solid rgba(255,211,25,.35);border-radius:12px;padding:10px}
+.mix-title{font-size:11px;color:var(--yellow);margin-bottom:8px;text-align:center}
+.mix-slots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.mix-slot{background:#10101f;border:1px solid var(--line);border-radius:10px;padding:6px 10px;text-align:center;min-width:86px;position:relative}
+.mix-slot.done{opacity:.45}.mix-slot.cur{border-color:var(--yellow);box-shadow:0 0 12px rgba(255,211,25,.4)}
+.ms-icon{font-size:20px}.ms-name{font-size:10px;font-weight:700}.ms-mod{font-size:9px;color:var(--cyan)}
+.ms-ev{position:absolute;top:-8px;right:-6px;background:var(--pink);color:#fff;font-size:9px;font-weight:700;border-radius:8px;padding:2px 6px}
+.ms-ev.gold{background:var(--yellow);color:#4a3200}
+/* result */
+.res-daily{display:flex;gap:8px;justify-content:center;margin-bottom:10px;flex-wrap:wrap}
+.res-mod{font-size:11px;font-weight:700;color:var(--cyan);border:1px solid rgba(34,230,255,.4);border-radius:8px;padding:3px 8px}
+.res-event{font-size:11px;font-weight:700;color:#4a3200;background:var(--yellow);border-radius:8px;padding:3px 8px;box-shadow:0 0 14px rgba(255,211,25,.5)}
+.res-mix{font-size:11px;font-weight:700;color:var(--pink);border:1px solid rgba(255,45,120,.4);border-radius:8px;padding:3px 8px}
+/* podium */
+.podium{display:flex;gap:10px;justify-content:center;align-items:flex-end;margin:10px 0}
+.podium-slot{text-align:center;background:#0b0b1c;border:1px solid var(--line);border-radius:12px;padding:10px;flex:1;max-width:170px}
+.place-1{border-color:var(--yellow);box-shadow:0 0 20px rgba(255,211,25,.35);order:2}
+.place-2{order:1}.place-3{order:3}
+.pod-medal{font-size:26px}.pod-nick{font-size:11px;color:var(--yellow);margin-top:4px}
+.pod-pts{font-size:12px;color:var(--cyan)}
+.pod-champ{text-align:center;font-family:var(--font-pixel);font-size:15px;color:var(--yellow);text-shadow:0 0 14px rgba(255,211,25,.7);margin-top:6px}
+/* golden round */
+body.golden-round #vignette{background:radial-gradient(ellipse at center,transparent 40%,rgba(255,211,25,.22) 100%)}
+body.golden-round .game-root{border-color:rgba(255,211,25,.5)!important;box-shadow:0 0 30px rgba(255,211,25,.25)}
+/* debug */
+#debug-daily{position:fixed;right:8px;bottom:8px;z-index:9999;background:#0b0b1c;border:1px solid var(--pink);border-radius:10px;padding:8px;font-family:var(--font-mono);font-size:11px;color:var(--ink)}
+#debug-daily button{background:#1a1a33;border:1px solid var(--line);color:var(--ink);border-radius:6px;font-size:10px;padding:3px 6px;margin:2px;cursor:pointer}
+.reduced-effects .daily-marquee span,.reduced-effects .daily-newflag{animation:none!important}
+.mix-end{background:none;border:1px solid var(--pink);color:var(--pink);border-radius:6px;font-size:11px;padding:1px 7px;margin-left:8px;cursor:pointer}
+.mix-end:hover{background:var(--pink);color:#fff}

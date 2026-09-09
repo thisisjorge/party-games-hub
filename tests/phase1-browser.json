@@ -1,0 +1,378 @@
+{
+  "results": [
+    {
+      "id": "lane-neutra",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "blue-push",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "red-push",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "crash",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "bot-2v2",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "support-roam",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "mid-rotation",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "objective-trade",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "enemy-missing",
+      "visible": 9,
+      "lastSeen": 1,
+      "failures": []
+    },
+    {
+      "id": "gank",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-01",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-02",
+      "visible": 9,
+      "lastSeen": 1,
+      "failures": []
+    },
+    {
+      "id": "jg-03",
+      "visible": 9,
+      "lastSeen": 1,
+      "failures": []
+    },
+    {
+      "id": "jg-04",
+      "visible": 8,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-05",
+      "visible": 9,
+      "lastSeen": 1,
+      "failures": []
+    },
+    {
+      "id": "jg-06",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-07",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-08",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-09",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-10",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-11",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-12",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-13",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-14",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-15",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-16",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-17",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-18",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-19",
+      "visible": 8,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-20",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-21",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-22",
+      "visible": 9,
+      "lastSeen": 1,
+      "failures": []
+    },
+    {
+      "id": "jg-23",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-24",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-25",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-26",
+      "visible": 8,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-27",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-28",
+      "visible": 9,
+      "lastSeen": 1,
+      "failures": []
+    },
+    {
+      "id": "jg-29",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-30",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-31",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-32",
+      "visible": 8,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-33",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-34",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-35",
+      "visible": 9,
+      "lastSeen": 1,
+      "failures": []
+    },
+    {
+      "id": "jg-36",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-37",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-38",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-39",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-40",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-41",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-42",
+      "visible": 10,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-43",
+      "visible": 8,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-44",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-45",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-46",
+      "visible": 9,
+      "lastSeen": 1,
+      "failures": []
+    },
+    {
+      "id": "jg-47",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-48",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-49",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-50",
+      "visible": 8,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-51",
+      "visible": 9,
+      "lastSeen": 0,
+      "failures": []
+    },
+    {
+      "id": "jg-52",
+      "visible": 9,
+      "lastSeen": 1,
+      "failures": []
+    }
+  ],
+  "errors": [],
+  "requests": []
+}

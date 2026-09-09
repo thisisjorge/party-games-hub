@@ -1,0 +1,15 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jungle Gap · regressão visual</title><style>
+body{margin:0;background:#080b18;color:#effaff;font:14px system-ui}header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:12px;background:#11172b}select,button{font:inherit;background:#1d2945;color:white;border:1px solid #46748c;padding:8px;border-radius:5px}iframe{display:block;width:100%;height:calc(100vh - 65px);border:0}.reference{display:none;position:fixed;top:90px;left:20px;width:min(46vw,586px);border:2px solid #ffe055;z-index:10;background:#080b18}.reference img{width:100%}.reference p{margin:5px}#status{color:#49e3b9}</style></head><body>
+<header><b>JUNGLE GAP · QA</b><select id="case"></select><button id="prev">←</button><button id="next">→</button><button id="reference">Comparar original</button><span id="status">carregando</span></header>
+<div class="reference"><p>Referência original · estruturas incorporadas</p><img src="../uploads/minimapa-lol-original.jpg"></div><iframe title="Cenário em teste" src="../index.html"></iframe>
+<script>
+const frame=document.querySelector('iframe'),select=document.querySelector('select');let scenarios=[];
+async function setup(){
+ const w=frame.contentWindow;if(!w.GameManager||w.document.querySelector('#screen-boot.active')){setTimeout(setup,100);return;}
+ for(const file of ['jungle-fixtures.js','structure-fixtures.js'])await new Promise((resolve,reject)=>{const s=w.document.createElement('script');s.src='tests/'+file;s.onload=resolve;s.onerror=reject;w.document.body.appendChild(s);});
+ scenarios=[...w.JG_FIXTURES.cases,...w.JG_STRUCTURE_FIXTURES,...w.PGH_JUNGLE];scenarios.forEach((s,i)=>select.add(new Option((i+1)+' · '+s.id+' · '+s.you,i)));
+ select.value=new URLSearchParams(location.search).get('case')||'0';render();
+}
+function render(){const w=frame.contentWindow,g=w.GameManager.get('jungle'),sc=scenarios[+select.value];w.GameManager.cleanup();w.UI.closeModal();w.UI.showScreen('game');w.document.querySelector('#game-name-tag').textContent='JUNGLE GAP';const st=g.createInitialState([],{});st.scenarios=[sc];st.rounds=1;st.roundIndex=0;st.roundEndsAt=Date.now()+3600000;g.render(g.getPublicState(st));document.querySelector('#status').textContent=w.document.querySelector('.jg-data-error')?'ERRO':'10 atores · '+sc.id;}
+select.onchange=render;document.querySelector('#prev').onclick=()=>{select.value=(+select.value+scenarios.length-1)%scenarios.length;render()};document.querySelector('#next').onclick=()=>{select.value=(+select.value+1)%scenarios.length;render()};document.querySelector('#reference').onclick=()=>{const el=document.querySelector('.reference');el.style.display=el.style.display==='block'?'none':'block';};frame.onload=setup;
+</script></body></html>

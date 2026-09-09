@@ -1,0 +1,9 @@
+{
+  "realPeerConnection": true,
+  "identicalPublicState": true,
+  "clientHasNoHostState": true,
+  "clientVoteLocked": true,
+  "synchronizedVerdict": true,
+  "nextRoundReset": true,
+  "errors": []
+}
