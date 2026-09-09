@@ -177,7 +177,7 @@ function tacticalMapSVG(sc,vm){
   const G=window.PGH_LANE_GEOMETRY;
   let svg='<g class="jg-layer-structures">';
   for(const s of Object.values(vm.structures))if(s.state!=='DESTROYED'){
-    const size=s.type==='INHIBITOR'?39:s.type==='NEXUS'?47:47,x=s.x*1000,y=s.y*1000;
+    const size=window.PGHMapDebug?.enabled&&window.PGH_MAP_SIZE_PRESET?window.PGH_MAP_SIZE_PRESET[s.type]:window.PGH_MAP_SCALE_OVERRIDE?(s.type==='INHIBITOR'?39:47)*PGH_MAP_SCALE_OVERRIDE:PGH_JUNGLE_STRUCTURES.sizes[s.type],x=s.x*1000,y=s.y*1000;
     svg+='<g data-structure-id="'+s.id+'" data-structure-type="'+s.type+'" data-state="'+s.state+'" data-x="'+s.x+'" data-y="'+s.y+'"><title>'+s.id+' · '+s.state+'</title>';
     svg+='<image href="'+s.asset+'" x="'+(x-size/2)+'" y="'+(y-size/2)+'" width="'+size+'" height="'+size+'"/>';
     if(s.type==='T1'&&s.platesRemaining>0)svg+='<text x="'+x+'" y="'+(y+2)+'" text-anchor="middle" fill="'+(s.team==='blue'?'#58d7ef':'#ff6575')+'" font-family="monospace" font-size="20" font-weight="900" data-plates="'+s.platesRemaining+'">'+s.platesRemaining+'</text>';
@@ -185,12 +185,12 @@ function tacticalMapSVG(sc,vm){
     svg+='</g>';
   }
   svg+='</g>';
-  const objectiveLabels={dragon:'DRG',baron:'BRN',herald:'HER',grubs:'GRB',scuttleTop:'CRAB',scuttleBot:'CRAB',mark:'MARCA'};
+  const objectiveLabels={dragon:'DRAG',baron:'BARON',herald:'ARAUTO',grubs:'GRUBS',scuttleTop:'ARONG.',scuttleBot:'ARONG.',mark:'MARCA'};
   svg+='<g class="jg-layer-objectives">';
   for(const [id,o] of Object.entries(vm.objectives))if(o.state==='UP'||o.state==='SPAWNING'){
     const x=o.x*1000,y=o.y*1000;
-    svg+='<g data-objective="'+esc(id)+'" data-state="'+o.state+'"><circle cx="'+x+'" cy="'+y+'" r="29" fill="#07101c" stroke="#dfb5ff" stroke-width="3"/>';
-    svg+='<text x="'+x+'" y="'+(y+7)+'" text-anchor="middle" fill="#dfb5ff" font-size="19" font-family="monospace">'+objectiveLabels[id]+'</text>';
+    svg+='<g data-objective="'+esc(id)+'" data-state="'+o.state+'"><title>'+objectiveLabels[id]+'</title><circle cx="'+x+'" cy="'+y+'" r="29" fill="#07101c" stroke="#dfb5ff" stroke-width="3"/>';
+    svg+='<text x="'+x+'" y="'+(y+5)+'" text-anchor="middle" fill="#dfb5ff" font-size="14" font-weight="700" font-family="monospace">'+objectiveLabels[id]+'</text>';
     if(o.seconds!==undefined)svg+='<text x="'+x+'" y="'+(y+47)+'" text-anchor="middle" fill="#fff" stroke="#07101c" stroke-width="4" paint-order="stroke" font-size="21">'+o.seconds+'s</text>';
     svg+='</g>';
   }
@@ -216,6 +216,7 @@ function tacticalMapSVG(sc,vm){
   }
   svg+='</g>';
   svg+='<g class="jg-layer-tactical"></g>';
+  if(window.PGHMapDebug)svg+=PGHMapDebug.overlay(vm);
   return '<div class="jg-map-plane"><img src="assets/maps/terrain-base.png" class="jg-map-base jg-layer-terrain" alt="Minimapa: base azul embaixo à esquerda, base vermelha em cima à direita"><svg class="jg-map-overlay" viewBox="0 0 1000 1000" role="img" aria-label="Estruturas, posições, waves e objetivos">'+svg+'</svg></div>';
 }
 
@@ -233,7 +234,7 @@ function optIcon(label){
   if(/DRAGON|DRAKE/.test(s)) return "◆";
   if(/BARON/.test(s)) return "◈";
   if(/HERALD|ARAUTO/.test(s)) return "◉";
-  if(/SCUTTLE|CRAB/.test(s)) return "≋";
+  if(/SCUTTLE|CRAB|ARONGUEJO/.test(s)) return "≋";
   if(/COUNTER/.test(s)) return "⊕";
   if(/DIVE/.test(s)) return "⊗";
   if(/INVADE|INVAD/.test(s)) return "⚔";
@@ -270,7 +271,7 @@ function render(ps){
   if(ps.instinct) html += '<span class="jg-instinct-badge">⚡INSTINCT</span>';
   html += '</div>';
   html += '<div class="jg-topbar-right">';
-  html += '<span class="jg-status">'+(ps.phase==="question"?("Vote! "+ps.answeredCount+"/"+ps.total+" LOCKED"):(ps.phase==="reveal"?"👀 REVEAL...":"📢 VERDICT"))+'</span>';
+  html += '<span class="jg-status">'+(ps.phase==="question"?("DECIDA! "+ps.answeredCount+"/"+ps.total):(ps.phase==="reveal"?"👀 REVELANDO...":"📢 VEREDITO"))+'</span>';
   html += '<span id="jg-timer" class="jg-timer-display font-mono2">--</span>';
   html += '</div>';
   html += '</div>';
@@ -283,12 +284,12 @@ function render(ps){
     
     // Context strip (time, you, HP, ult, gold)
     html += '<div class="jg-ctx">';
-    html += '<div class="jg-ctx-item"><span class="jg-ctx-label">TIME</span><span class="jg-ctx-val">'+esc(sc.time||"—")+'</span></div>';
-    html += '<div class="jg-ctx-item"><span class="jg-ctx-label">YOU</span><span class="jg-ctx-val jg-ctx-you">'+esc(sc.you||"—")+'</span></div>';
+    html += '<div class="jg-ctx-item"><span class="jg-ctx-label">TEMPO</span><span class="jg-ctx-val">'+esc(sc.time||"—")+'</span></div>';
+    html += '<div class="jg-ctx-item"><span class="jg-ctx-label">VOCÊ</span><span class="jg-ctx-val jg-ctx-you">'+esc(sc.you||"—")+'</span></div>';
     html += '<div class="jg-ctx-item"><span class="jg-ctx-label">HP</span><span class="jg-ctx-val" style="color:'+hpColor(hpP)+'">'+esc(sc.hp||"—")+'</span></div>';
     html += '<div class="jg-ctx-item"><span class="jg-ctx-label">ULT</span><span class="jg-ctx-val'+(String(sc.ult||"").indexOf("READY")>=0?" jg-ctx-on":"")+'">'+esc(sc.ult||"—")+'</span></div>';
     if(sc.gold) html += '<div class="jg-ctx-item"><span class="jg-ctx-label">GOLD</span><span class="jg-ctx-val">'+esc(sc.gold)+'</span></div>';
-    html += '<div class="jg-ctx-item"><span class="jg-ctx-label">TYPE</span><span class="jg-ctx-val jg-ctx-type">'+esc((sc.type||"DECISION").toUpperCase())+'</span></div>';
+    html += '<div class="jg-ctx-item"><span class="jg-ctx-label">CENÁRIO</span><span class="jg-ctx-val jg-ctx-type">'+esc((sc.type||"DECISÃO").replace(/scuttle/ig,'aronguejo').replace(/herald/ig,'arauto').toUpperCase())+'</span></div>';
     html += '</div>';
     
     // Main layout: map + info panels (widescreen)
@@ -316,7 +317,7 @@ function render(ps){
     html += '</div>';
     html += '<div class="jg-info"><div class="jg-info-label">JUNGLE · 2 = VOCÊ / INIMIGO</div>'+vm.jungleActors.map(renderActorRow).join('');
     html += '<div class="jg-info-row bad">'+esc(sc.ej||'')+'</div>';
-    html += '<div class="jg-info-row good"><span class="jg-info-label">OBJECTIVES</span><span>'+esc(sc.obj||"—")+'</span></div>';
+    html += '<div class="jg-info-row good"><span class="jg-info-label">OBJETIVOS</span><span>'+esc(sc.obj||"—")+'</span></div>';
     html += '</div>';
     html += '</div>';
     
@@ -325,7 +326,7 @@ function render(ps){
     html += '<details class="jg-context-details"><summary>HP, feitiços e contexto das lanes</summary><div>'+['top','mid','bot'].map(l=>'<p><b>'+l.toUpperCase()+':</b> '+esc(sc[l]||'—')+'</p>').join('')+'</div></details>';
     
     // Options
-    html += '<div class="jg-question">WHAT\'S THE PLAY?</div>';
+    html += '<div class="jg-question">QUAL É A JOGADA?</div>';
     html += '<div class="jg-options">';
     const letters = ["A","B","C","D"];
     (sc.opts||[]).forEach(function(op, i){
@@ -334,12 +335,12 @@ function render(ps){
       html += '<span class="opt-letter">'+letters[i]+'</span>';
       html += '<span class="jg-opt-icon">'+optIcon(op)+'</span>';
       html += '<span class="jg-opt-text">'+esc(op)+'</span>';
-      if(picked) html += '<span class="jg-locked">🔒 LOCKED</span>';
+      if(picked) html += '<span class="jg-locked">🔒</span>';
       html += '</button>';
     });
     html += '</div>';
     
-    if(myPick!==null) html += '<div class="g-sub" style="margin-top:6px;font-size:11px">✅ Locked in · '+ps.answeredCount+'/'+ps.total+'</div>';
+    if(myPick!==null) html += '<div class="g-sub" style="margin-top:6px;font-size:11px">✅ Confirmado · '+ps.answeredCount+'/'+ps.total+'</div>';
     
     // Scores strip
     html += '<div class="jg-scores-strip">';
@@ -375,7 +376,7 @@ function render(ps){
     
     // Tactical replay
     html += '<div class="jg-replay">';
-    html += '<div class="jg-replay-row"><span class="jg-replay-label">YOUR CALL</span><span class="jg-replay-val">';
+    html += '<div class="jg-replay-row"><span class="jg-replay-label">SUA CALL</span><span class="jg-replay-val">';
     const myPickIdx = ps.picks ? ps.picks.find(function(p){ return p.playerId===PGHStore.playerId; }) : null;
     html += esc(myPickIdx ? myPickIdx.label : "—");
     html += '</span></div>';

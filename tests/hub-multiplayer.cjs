@@ -2,7 +2,7 @@ const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),ass
 const out=process.env.HUB_QA_OUT||path.join(__dirname,'results-hub');fs.mkdirSync(out,{recursive:true});
 (async()=>{const browser=await chromium.launch({channel:'msedge',headless:true});const errors=[],report={games:{},players:3};
 try{
- async function player(name,mobile=false){const ctx=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1366,height:768},isMobile:mobile,hasTouch:mobile,ignoreHTTPSErrors:true});const p=await ctx.newPage();p.on('pageerror',e=>errors.push(e.message));await p.goto('http://127.0.0.1:8080',{waitUntil:'domcontentloaded'});await p.locator('#profile-nickname').fill(name);await p.locator('#profile-nickname').press('Enter');await p.locator('#screen-home.active').waitFor();return p;}
+ async function player(name,mobile=false){const ctx=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1366,height:768},isMobile:mobile,hasTouch:mobile,ignoreHTTPSErrors:true});const p=await ctx.newPage();p.on('pageerror',e=>errors.push(e.message));await p.goto(process.env.HUB_URL||'http://127.0.0.1:8080',{waitUntil:'domcontentloaded'});await p.locator('#profile-nickname').fill(name);await p.locator('#profile-nickname').press('Enter');await p.locator('#screen-home.active').waitFor();return p;}
  const host=await player('Host RC1'),b=await player('Bia RC1'),c=await player('Caio RC1',true),pages=[host,b,c];
  await host.locator('#btn-create-room').click();await host.locator('#rc-enter').click({timeout:30000});const code=await host.locator('#lobby-room-code').innerText();
  for(const p of [b,c]){await p.locator('#btn-join-room').click();await p.locator('#join-modal-input').fill(code);await p.locator('#join-go').click();await p.locator('#screen-lobby.active').waitFor();await p.locator('#btn-ready').click();}
@@ -10,7 +10,7 @@ try{
   await b.evaluate(()=>{const original=GameManager.netHandler;GameManager.netHandler=function(msg){if(msg.type==='GAME_ENDED')window.lastEnd=msg;return original(msg);};});
  const ff=async()=>{await host.evaluate(()=>PGHDebug.fastForward());await host.waitForTimeout(180);};
  async function phase(value){await Promise.all(pages.map(p=>p.waitForFunction(v=>GameManager.publicState?.phase===v,value)));}
- async function shot(label){await host.screenshot({path:path.join(out,label+'-desktop.png'),fullPage:true,animations:'disabled',timeout:60000});await c.screenshot({path:path.join(out,label+'-mobile.png'),fullPage:true,animations:'disabled',timeout:60000});}
+ async function shot(label){await host.screenshot({path:path.join(out,label+'-desktop.png'),fullPage:!label.includes('podium'),animations:'disabled',timeout:60000});await c.screenshot({path:path.join(out,label+'-mobile.png'),fullPage:!label.includes('podium'),animations:'disabled',timeout:60000});}
  for(const id of process.env.HUB_MIX_ONLY?[]:['stop','fake','reflex','termo','riftle','wordbomb','jungle']){
   await host.locator('#machines-grid [data-game="'+id+'"]').click();await host.locator('#btn-start-game').click();await host.waitForFunction(id=>GameManager.current===id&&PGHStore.gamePhase==='playing',id);await Promise.all(pages.map(p=>p.waitForFunction(id=>GameManager.current===id&&!!GameManager.publicState,id)));await shot(id+'-play');
   assert.equal(await b.evaluate(()=>PGHDebug.hostState()),null);
@@ -33,6 +33,11 @@ try{
    for(const p of pages){for(const ch of secret)await p.locator('[data-k="'+ch+'"]').click();await p.locator('[data-k="ENTER"]').click();}
   }else if(id==='riftle'){
    const secret=await host.evaluate(()=>PGHDebug.hostState().secret.n);for(const p of pages){await p.locator('#rift-input').fill(secret);await p.locator('#rift-send').click();}
+  }else if(id==='wordbomb'){
+   const turn=await host.evaluate(()=>GameManager.publicState.currentPlayerId),sequence=await host.evaluate(()=>GameManager.publicState.sequence);
+   const word=await host.evaluate(seq=>PGH_WORDBOMB_LEXICON.find(w=>w.includes(seq.toLowerCase())),sequence);
+   const current=(await Promise.all(pages.map(async p=>({p,id:await p.evaluate(()=>PGHStore.playerId)})))).find(x=>x.id===turn).p;
+   await current.locator('#wb-input').fill(word);await current.locator('#wb-send').click();await host.waitForFunction(id=>GameManager.publicState.currentPlayerId!==id,turn);
   }else if(id==='jungle'){
    for(let r=0;r<5;r++){await phase('question');for(const p of pages)await p.locator('.jg-opt').first().click();await phase('reveal');await ff();await phase('verdict');if(r===0)await shot('jungle-verdict');await ff();}
   }
@@ -53,7 +58,7 @@ try{
   if(slot<4){await host.locator('#btn-mixnext').click();}else{await host.locator('#btn-podium').click();await host.locator('#pod-lobby').waitFor();await shot('party-mix-podium');}
  }
  report.partyMixFiveRounds=true;
- const rewards=await b.evaluate(()=>({xp:PGHStore.profile.xp,tokens:PGHStore.profile.tokens}));await b.evaluate(()=>Daily.showPodium(false));assert.deepEqual(await b.evaluate(()=>({xp:PGHStore.profile.xp,tokens:PGHStore.profile.tokens})),rewards,'mix reward is once per day');report.dailyRewardIdempotent=true;
+ await b.locator('#pod-lobby').waitFor();const rewards=await b.evaluate(()=>({xp:PGHStore.profile.xp,tokens:PGHStore.profile.tokens}));await b.evaluate(()=>Daily.showPodium(false));assert.deepEqual(await b.evaluate(()=>({xp:PGHStore.profile.xp,tokens:PGHStore.profile.tokens})),rewards,'mix reward is once per day');report.dailyRewardIdempotent=true;
  await host.locator('#pod-lobby').click();await b.evaluate(()=>UI.closeModal());await c.evaluate(()=>UI.closeModal());await host.locator('#screen-lobby.active').waitFor();
  // Rematch and orderly client departure keep the same room usable.
  await host.locator('#machines-grid [data-game="termo"]').click();await host.locator('#btn-start-game').click();await host.waitForFunction(()=>PGHStore.gamePhase==='playing');await ff();await host.locator('#btn-again').waitFor();await host.locator('#btn-again').click();await host.waitForFunction(()=>PGHStore.gamePhase==='playing');report.rematch=true;

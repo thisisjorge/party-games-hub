@@ -28,7 +28,7 @@ const MODS = {
     { id: "ROLE_LOCK", name: "ROLE LOCK", desc: "1 rota em foco", icon: "🛡" }
   ],
   jungle: [
-    { id: "INSTINCT_ALL", name: "JUNGLE INSTINCT", desc: "todas as decisões em 5s", icon: "⚡" },
+    { id: "INSTINCT_ALL", name: "JUNGLE INSTINCT", desc: "todas as decisões em 10s", icon: "⚡" },
     { id: "OBJECTIVE", name: "OBJECTIVE CONTROL", desc: "cenários de objetivo", icon: "🐉" },
     { id: "TRACKER", name: "TRACK THE JUNGLER", desc: "cenários de tracking", icon: "👁" },
     { id: "GANK_FARM", name: "GANK OR FARM", desc: "tempo e pathing", icon: "🌾" },
@@ -377,7 +377,7 @@ function resultButtonsHTML(){
       }
       return '<div class="g-row" style="margin-top:16px"><button class="btn-arcade secondary" id="btn-podium">★ VER PODIUM</button><button class="btn-arcade ghost" id="btn-tolobby">LOBBY</button></div>';
     }
-    return '<div class="g-row" style="margin-top:16px"><button class="btn-arcade primary" id="btn-again">↻ JOGAR DE NOVO</button><button class="btn-arcade ghost" id="btn-tolobby">LOBBY</button></div>';
+    return '<div class="g-row" style="margin-top:16px"><button class="btn-arcade primary" id="btn-again">↻ JOGAR DE NOVO</button><button class="btn-arcade secondary" id="btn-change-game">TROCAR JOGO</button><button class="btn-arcade ghost" id="btn-tolobby">VOLTAR AO LOBBY</button></div>';
   }
   const mixw=PGHStore.dailyMix;
   const wait=(mixw&&mixw.active)?'<div class="g-sub" style="margin-top:16px">Aguardando HOST avançar o MIX ★ '+(mixw.idx+1)+'/'+mixw.queue.length+'...</div>':'<div class="g-sub" style="margin-top:16px">Aguardando HOST voltar ao lobby...</div>';
@@ -386,6 +386,7 @@ function resultButtonsHTML(){
 function bindResultButtons(){
   const q = function(id){ return document.getElementById(id); };
   const ag=q("btn-again"); if(ag)ag.addEventListener("click",function(){ GameManager.startGame(); });
+  const cg=q('btn-change-game');if(cg)cg.addEventListener('click',function(){GameManager.quitToLobby();document.getElementById('machines-grid')?.scrollIntoView({block:'center'});});
   const nx=q("btn-mixnext"); if(nx)nx.addEventListener("click",function(){ AudioManager.play("coin"); nextGame(); });
   const pd=q("btn-podium"); if(pd)pd.addEventListener("click",function(){ showPodium(true); });
   const lb=q("btn-tolobby"); if(lb)lb.addEventListener("click",function(){ GameManager.quitToLobby(); });
@@ -421,7 +422,9 @@ function showPodium(asHost){
     html += "<div class='pod-champ'>👑 "+String(champ?champ.nickname:"—").toUpperCase()+"</div>";
     html += "<div class='g-sub' style='text-align:center'>campeão do Daily Mix desta sala</div>";
     html += "<button class='btn-arcade primary big w-full' id='pod-lobby' style='margin-top:12px'>LOBBY →</button>";
+    if(PGHStore.isHost)html+="<button class='btn-arcade secondary w-full' id='pod-again' style='margin-top:12px'>JOGAR MIX DE NOVO</button>";
     const m = UI.openModal(html);
+    m.querySelector('#pod-again')?.addEventListener('click',function(){UI.closeModal();PGHStore.dailyMix=null;GameManager.quitToLobby();startMix();});
     AudioManager.play("victory"); UI.confetti(160);
     // recompensa de conclusão (1x/dia, cada jogador na própria máquina)
     const d = day();

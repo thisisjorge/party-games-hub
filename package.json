@@ -1,0 +1,18 @@
+{
+  "name": "party-games-hub",
+  "version": "1.0.0-rc.1",
+  "private": true,
+  "description": "Party Games Hub e Jungle Gap Solo — beta privado",
+  "scripts": {
+    "start": "node tools/serve.cjs",
+    "build": "node tools/build.cjs",
+    "test": "node tests/jungle-regression.cjs --production && node tests/hub-regression.cjs",
+    "test:browser": "node tests/browser-regression.cjs",
+    "test:multiplayer": "node tests/hub-multiplayer.cjs",
+    "test:responsive": "node tests/responsive-solo.cjs",
+    "test:map": "node tests/map-visual.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

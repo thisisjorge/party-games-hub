@@ -45,6 +45,9 @@ assert.throws(()=>PGH_JUNGLE_STRUCTURES.resolve({redMidT2:{platesRemaining:5}}))
 assert.throws(()=>PGH_JUNGLE_STRUCTURES.resolve({redTopT1:{platesRemaining:6}}));
 assert.throws(()=>PGH_JUNGLE_STRUCTURES.resolve({fakeTower:'ALIVE'}));
 check(PGH_JUNGLE_STRUCTURES.resolve({blueTopT1:{state:'PLATED',platesRemaining:2}}).blueTopT1.platesRemaining===2,'dynamic plate count');
+for(const type of ['t1','t2','t3','inhib','nexus-tower','nexus']){const art=team=>fs.readFileSync(path.join(root,'assets/structures',team,type+'.svg'),'utf8').replace(/#[0-9a-f]{6}/gi,'#COLOR');check(art('blue')===art('red'),'paired silhouette '+type);}
+const inner=JG_FIXTURES.fixture('inner-boundary');inner.state.structures={redTopT1:'DESTROYED'};inner.state.lanes.top.frontT=.90;inner.state.lanes.top.reason='T1 down';assert.throws(()=>M.buildJungleScenarioViewModel(inner));inner.state.structures.redTopT2='DESTROYED';validate(inner);
+check(G.resolvePosition('heraldPitAnchor').x===438/1254,'measured herald center');check(G.resolvePosition('dragonPitAnchor').x===829/1254,'measured dragon center');
 if(process.argv.includes('--production')){
  vm.runInThisContext(fs.readFileSync(path.join(root,'data/jungle-scenarios.js'),'utf8'));check(PGH_JUNGLE.length===52,'52 scenarios');
  for(const sc of PGH_JUNGLE){validate(sc);production.push({id:sc.id,result:'PASS'});}

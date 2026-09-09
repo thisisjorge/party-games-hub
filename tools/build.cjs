@@ -13,7 +13,9 @@ for(const [name,entry] of [['hub','index.html'],['jungle','jungle.html']]){
  fs.writeFileSync(path.join(dest,'index.html'),html);
  for(const f of references(html))copy(f,dest);
  copy('assets/maps/terrain-base.png',dest);copy('assets/structures',dest);
- if(name==='hub'){
+ copy('licenses',dest);copy('THIRD-PARTY.md',dest);
+  if(name==='hub'){
+  copy('assets/fonts',dest);
   copy('jungle.html',dest);for(const f of references(fs.readFileSync(path.join(root,'jungle.html'),'utf8')))copy(f,dest);
  }
  let config=fs.readFileSync(path.join(root,'config.js'),'utf8');

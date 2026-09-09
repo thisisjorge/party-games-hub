@@ -63,9 +63,12 @@
       const front=l.frontT??rule.front,towers=G.TOWERS[lane];
       if(front<.05 || front>.95)throw new Error('Invalid wave front');
       if(l.frontT!==undefined && !l.reason)throw new Error('Custom wave front requires an explicit reason');
-      const suffix=lane[0].toUpperCase()+lane.slice(1)+'T1';
-      const structures={blueT1:vm.structures['blue'+suffix].state!=='DESTROYED',redT1:vm.structures['red'+suffix].state!=='DESTROYED'};
-      if((structures.blueT1 && front-.012<towers.blueT1)||(structures.redT1 && front+.012>towers.redT1))throw new Error('Wave behind intact T1: '+lane);
+      const suffix=lane[0].toUpperCase()+lane.slice(1),structures={};
+      for(const team of ['blue','red'])for(const tier of ['T1','T2','T3'])structures[team+tier]=vm.structures[team+suffix+tier].state!=='DESTROYED';
+      for(const team of ['blue','red']){
+        const tier=['T1','T2','T3'].find(t=>structures[team+t]);
+        if(tier&&(team==='blue'?front-.012<towers[team+tier]:front+.012>towers[team+tier]))throw new Error('Wave behind intact '+team+' '+tier+': '+lane);
+      }
       vm.lanes[lane]={waveState:l.waveState,waveFrontT:front,label:rule.label,structures,waves:['blue','red'].map(team=>({team,...G.pointOnLane(lane,front+(team==='blue'?-.012:.012))}))};
       vm.cardLanes[lane]={...vm.lanes[lane],actors:[]};
     }
@@ -113,7 +116,7 @@
       const key=a.renderX+','+a.renderY;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(a);
     }
     for(const group of groups.values())if(group.length>1)group.sort((a,b)=>a.id.localeCompare(b.id)).forEach((a,i)=>{const angle=2*Math.PI*i/group.length;a.renderX=Math.max(.03,Math.min(.97,a.renderX+Math.cos(angle)*.038));a.renderY=Math.max(.03,Math.min(.97,a.renderY+Math.sin(angle)*.038));});
-    const objectivePositions={dragon:'dragonPit',baron:'baronPit',herald:'heraldPit',grubs:'grubsPit',scuttleTop:'topRiver',scuttleBot:'botRiver',mark:'grompRed'};
+    const objectivePositions={dragon:'dragonPitAnchor',baron:'baronPitAnchor',herald:'heraldPitAnchor',grubs:'grubsAnchor',scuttleTop:'topScuttleAnchor',scuttleBot:'botScuttleAnchor',mark:'grompRed'};
     for(const [id,o] of Object.entries(state.objectives)){
       const p=G.resolvePosition(objectivePositions[id]);if(!p)throw new Error('Unknown objective '+id);
       if(!['UP','SPAWNING','DEAD','UNKNOWN'].includes(o.state))throw new Error('Invalid objective state');

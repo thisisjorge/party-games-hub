@@ -90,7 +90,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -207,7 +207,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -242,11 +242,11 @@ window.PGH_JUNGLE = [
     "top": "aliado 40% vs inimigo 20% sem flash, wave indo pro aliado",
     "mid": "sua mid com prioridade",
     "bot": "sua bot tem prioridade",
-    "obj": "Dragon 1:20 · Herald UP",
+    "obj": "Dragon 1:20 · arauto UP",
     "ej": "visto bot há 6s",
     "opts": [
       [
-        "START HERALD",
+        "START ARAUTO",
         "G"
       ],
       [
@@ -262,7 +262,7 @@ window.PGH_JUNGLE = [
         "I"
       ]
     ],
-    "exp": "Jungler visto bot + prioridade mid = janela para Herald. Top pode esperar; confirme visão antes de começar.",
+    "exp": "Jungler visto bot + prioridade mid = janela para arauto. Top pode esperar; confirme visão antes de começar.",
     "id": "jg-03",
     "state": {
       "actors": {
@@ -323,7 +323,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -448,7 +448,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -560,7 +560,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -682,7 +682,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -734,7 +734,7 @@ window.PGH_JUNGLE = [
         "R"
       ],
       [
-        "TROCAR POR HERALD",
+        "TROCAR POR ARAUTO",
         "O"
       ]
     ],
@@ -799,7 +799,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -916,7 +916,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "midBlueSide"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -1032,7 +1032,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "redTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -1262,7 +1262,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -1379,7 +1379,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -1417,15 +1417,15 @@ window.PGH_JUNGLE = [
     "top": "neutro",
     "mid": "sua mid precisa resetar (1500g)",
     "bot": "sua bot puxou e resetou",
-    "obj": "Herald UP",
+    "obj": "arauto UP",
     "ej": "bot side",
     "opts": [
       [
-        "COBRAR HERALD COM MID APÓS PUSH",
+        "COBRAR ARAUTO COM MID APÓS PUSH",
         "G"
       ],
       [
-        "HERALD SOLO AGORA",
+        "ARAUTO SOLO AGORA",
         "R"
       ],
       [
@@ -1437,7 +1437,7 @@ window.PGH_JUNGLE = [
         "I"
       ]
     ],
-    "exp": "Espere sua mid puxar antes de Herald. Solo Herald com jungler vivo é arriscado.",
+    "exp": "Espere sua mid puxar antes de arauto. Solo arauto com jungler vivo é arriscado.",
     "id": "jg-13",
     "state": {
       "actors": {
@@ -1504,7 +1504,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -1620,7 +1620,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "midBlueSide"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -1732,7 +1732,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -1768,11 +1768,11 @@ window.PGH_JUNGLE = [
     "top": "neutro",
     "mid": "neutro",
     "bot": "seu bot levou T1",
-    "obj": "Dragon 0:20 · Herald UP · inimigos indo drag",
+    "obj": "Dragon 0:20 · arauto UP · inimigos indo drag",
     "ej": "no drag com time",
     "opts": [
       [
-        "TROCAR POR HERALD",
+        "TROCAR POR ARAUTO",
         "G"
       ],
       [
@@ -1788,7 +1788,7 @@ window.PGH_JUNGLE = [
         "R"
       ]
     ],
-    "exp": "Eles com setup no drag = troque por Herald. Forçar 4v5 atrasado é throw.",
+    "exp": "Eles com setup no drag = troque por arauto. Forçar 4v5 atrasado é throw.",
     "id": "jg-16",
     "state": {
       "actors": {
@@ -1849,7 +1849,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -1975,7 +1975,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -2087,7 +2087,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBase"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -2123,11 +2123,11 @@ window.PGH_JUNGLE = [
     "top": "inimigo top morto (TP gasto)",
     "mid": "sua mid com prioridade",
     "bot": "neutro",
-    "obj": "Herald UP",
+    "obj": "arauto UP",
     "ej": "bot",
     "opts": [
       [
-        "HERALD COM PRIORIDADE",
+        "ARAUTO COM PRIORIDADE",
         "G"
       ],
       [
@@ -2143,7 +2143,7 @@ window.PGH_JUNGLE = [
         "I"
       ]
     ],
-    "exp": "Top morto sem TP + mid prioridade = Herald grátis. Janela de tempo perfeita.",
+    "exp": "Top morto sem TP + mid prioridade = arauto grátis. Janela de tempo perfeita.",
     "id": "jg-19",
     "state": {
       "actors": {
@@ -2205,7 +2205,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -2321,7 +2321,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -2463,7 +2463,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -2575,7 +2575,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "redTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -2614,7 +2614,7 @@ window.PGH_JUNGLE = [
     "top": "perdendo feio",
     "mid": "vencendo com prioridade",
     "bot": "empatado",
-    "obj": "Herald UP",
+    "obj": "arauto UP",
     "ej": "Sejuani no bot side",
     "opts": [
       [
@@ -2626,7 +2626,7 @@ window.PGH_JUNGLE = [
         "I"
       ],
       [
-        "HERALD SOLO SEM TOP",
+        "ARAUTO SOLO SEM TOP",
         "R"
       ],
       [
@@ -2695,7 +2695,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -2734,7 +2734,7 @@ window.PGH_JUNGLE = [
     "ej": "divando bot",
     "opts": [
       [
-        "HERALD/GRUBS ENQUANTO DIVAM",
+        "ARAUTO/GRUBS ENQUANTO DIVAM",
         "G"
       ],
       [
@@ -2811,7 +2811,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -2975,7 +2975,7 @@ window.PGH_JUNGLE = [
         "O"
       ],
       [
-        "TROCAR HERALD",
+        "TROCAR ARAUTO",
         "O"
       ]
     ],
@@ -3041,7 +3041,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -3158,7 +3158,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -3270,7 +3270,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -3389,7 +3389,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -3536,7 +3536,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBase"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -3648,7 +3648,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBase"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -3709,11 +3709,11 @@ window.PGH_JUNGLE = [
     "top": "neutro",
     "mid": "inimigo mid morto 15s",
     "bot": "neutro",
-    "obj": "Herald UP",
+    "obj": "arauto UP",
     "ej": "morto junto",
     "opts": [
       [
-        "HERALD GRÁTIS",
+        "ARAUTO GRÁTIS",
         "G"
       ],
       [
@@ -3729,7 +3729,7 @@ window.PGH_JUNGLE = [
         "I"
       ]
     ],
-    "exp": "Mid + jungler mortos = Herald sem contestação. Tempo é recurso: converta em objetivo.",
+    "exp": "Mid + jungler mortos = arauto sem contestação. Tempo é recurso: converta em objetivo.",
     "id": "jg-32",
     "state": {
       "actors": {
@@ -3791,7 +3791,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -3907,7 +3907,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -4024,7 +4024,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -4141,7 +4141,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "redTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -4370,7 +4370,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -4406,11 +4406,11 @@ window.PGH_JUNGLE = [
     "top": "neutro",
     "mid": "sua mid low recuando",
     "bot": "neutro",
-    "obj": "Herald UP + aronguejo",
+    "obj": "arauto UP + aronguejo",
     "ej": "full HP com mid",
     "opts": [
       [
-        "DAR HERALD, FARMAR E RESETAR",
+        "DAR ARAUTO, FARMAR E RESETAR",
         "G"
       ],
       [
@@ -4426,7 +4426,7 @@ window.PGH_JUNGLE = [
         "O"
       ]
     ],
-    "exp": "60% sem mid vs 2 full = entregue Herald. Viver > morrer por objetivo perdido.",
+    "exp": "60% sem mid vs 2 full = entregue arauto. Viver > morrer por objetivo perdido.",
     "id": "jg-38",
     "state": {
       "actors": {
@@ -4487,7 +4487,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -4606,7 +4606,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -4748,7 +4748,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "midBlueSide"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -4860,7 +4860,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -4978,7 +4978,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -5099,7 +5099,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -5240,7 +5240,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -5381,7 +5381,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -5498,7 +5498,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -5619,7 +5619,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "redTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -5650,11 +5650,11 @@ window.PGH_JUNGLE = [
     "top": "fight top 1v1",
     "mid": "neutro",
     "bot": "sua bot recuando, inimigos divando?",
-    "obj": "Herald UP",
+    "obj": "arauto UP",
     "ej": "bot",
     "opts": [
       [
-        "ULT TOP + HERALD",
+        "ULT TOP + ARAUTO",
         "G"
       ],
       [
@@ -5670,7 +5670,7 @@ window.PGH_JUNGLE = [
         "I"
       ]
     ],
-    "exp": "Nocturne: ult no top + Herald. Ult parada é ult desperdiçada.",
+    "exp": "Nocturne: ult no top + arauto. Ult parada é ult desperdiçada.",
     "id": "jg-48",
     "state": {
       "actors": {
@@ -5731,7 +5731,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -5847,7 +5847,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -5967,7 +5967,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -6079,7 +6079,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBase"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -6204,7 +6204,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "Enemy Jungler",
+          "champion": "JG INIMIGO",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
