@@ -10,7 +10,7 @@
     redTopT1:[392,150,'T1'],redTopT2:[687,150,'T2'],redTopT3:[850,150,'T3'],redTopInhib:[925,150,'INHIBITOR'],
     redMidT1:[725,555,'T1'],redMidT2:[823,457,'T2'],redMidT3:[912,368,'T3'],redMidInhib:[966,312,'INHIBITOR'],
     redBotT1:[1107,862,'T1'],redBotT2:[1107,592,'T2'],redBotT3:[1107,395,'T3'],redBotInhib:[1107,320,'INHIBITOR'],
-    blueNexusTowerA:[198,1016,'NEXUS_TURRET'],blueNexusTowerB:[256,1074,'NEXUS_TURRET'],blueNexus:[174,1106,'NEXUS'],
+    blueNexusTowerA:[184,994,'NEXUS_TURRET'],blueNexusTowerB:[249,1059,'NEXUS_TURRET'],blueNexus:[154,1088,'NEXUS'],
     redNexusTowerA:[1005,195,'NEXUS_TURRET'],redNexusTowerB:[1070,260,'NEXUS_TURRET'],redNexus:[1100,166,'NEXUS']
   };
   const files={T1:'t1',T2:'t2',T3:'t3',INHIBITOR:'inhib',NEXUS_TURRET:'nexus-tower',NEXUS:'nexus'};

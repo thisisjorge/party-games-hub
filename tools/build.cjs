@@ -13,6 +13,7 @@ for(const [name,entry] of [['hub','index.html'],['jungle','jungle.html']]){
  fs.writeFileSync(path.join(dest,'index.html'),html);
  for(const f of references(html))copy(f,dest);
  copy('assets/maps/terrain-base.png',dest);copy('assets/structures',dest);
+ copy('assets/icons',dest);
  copy('licenses',dest);copy('THIRD-PARTY.md',dest);
   if(name==='hub'){
   copy('assets/fonts',dest);
@@ -25,7 +26,7 @@ for(const [name,entry] of [['hub','index.html'],['jungle','jungle.html']]){
  if(name==='jungle')fs.writeFileSync(path.join(dest,'hub-unavailable.html'),'<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Party Games Hub</title><body style="background:#090d17;color:#e8f1eb;font:20px sans-serif;padding:8vw"><h1>Party Games Hub</h1><p>O endereço multiplayer será informado quando a publicação do Hub estiver concluída.</p><a style="color:#70efae" href="index.html">Voltar ao treino</a></body></html>');
  fs.writeFileSync(path.join(dest,'_headers'),'/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  X-Frame-Options: SAMEORIGIN\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n\n/config.js\n  Cache-Control: no-store\n');
  const hashes={};function walk(dir){for(const item of fs.readdirSync(dir,{withFileTypes:true})){const f=path.join(dir,item.name);if(item.isDirectory())walk(f);else hashes[path.relative(dest,f).replaceAll('\\','/')]=crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');}}walk(dest);
- fs.writeFileSync(path.join(dest,'build-manifest.json'),JSON.stringify({version:'1.0.0-rc.1',product:name,files:hashes},null,2));
+ fs.writeFileSync(path.join(dest,'build-manifest.json'),JSON.stringify({version:require('../package.json').version,product:name,files:hashes},null,2));
  console.log(name+': '+Object.keys(hashes).length+' files → '+path.relative(root,dest));
 }
 for(const file of ['js/games/jungle-gap.js','data/scenario-state-model.js','data/lane-geometry.js','data/jungle-structures.js','data/jungle-scenarios.js']){

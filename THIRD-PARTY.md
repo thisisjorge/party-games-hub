@@ -13,3 +13,5 @@ Este projeto de fãs é independente e não é associado à Riot Games. Os nomes
 | Vocabulário PT-BR | https://github.com/pythonprobr/palavras | MPL 2.0; `licenses/Portuguese-MPL-2.0.txt` |
 
 O vocabulário distribuído em `data/wordbomb-lexicon.js` contém o código-fonte da lista normalizada: minúsculas, decomposição de acentos, remoção de não letras, deduplicação e filtro de 3–20 caracteres. Esse arquivo permanece sob MPL 2.0. Fontes e bibliotecas visuais são servidas localmente. As fontes factuais das perguntas de Fake Answer estão registradas em cada pergunta e aparecem após a revelação.
+
+Ícone Smite: asset SummonerSmite do Riot Data Dragon, servido localmente sem edição: https://ddragon.leagueoflegends.com/cdn/15.1.1/img/spell/SummonerSmite.png . Usado como favicon e identificador do Jungle Gap neste projeto de fãs.
