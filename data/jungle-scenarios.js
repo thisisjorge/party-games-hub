@@ -2734,7 +2734,7 @@ window.PGH_JUNGLE = [
     "ej": "divando bot",
     "opts": [
       [
-        "ARAUTO/GRUBS ENQUANTO DIVAM",
+        "ARAUTO/VASTILARVAS ENQUANTO DIVAM",
         "G"
       ],
       [
@@ -3189,7 +3189,7 @@ window.PGH_JUNGLE = [
     "top": "sua top estendida sem flash",
     "mid": "neutro",
     "bot": "neutro",
-    "obj": "Grubs up",
+    "obj": "Vastilarvas up",
     "ej": "visto entrando top side",
     "opts": [
       [
@@ -3197,7 +3197,7 @@ window.PGH_JUNGLE = [
         "G"
       ],
       [
-        "PEGAR GRUBS ENQUANTO ELE GANKA",
+        "PEGAR VASTILARVAS ENQUANTO ELE GANKA",
         "O"
       ],
       [
@@ -3209,7 +3209,7 @@ window.PGH_JUNGLE = [
         "I"
       ]
     ],
-    "exp": "Countergank com Maokai R vira fight. Grubs é o plano B cross-map aceitável.",
+    "exp": "Countergank com Maokai R vira fight. Vastilarvas são o plano B cross-map aceitável.",
     "id": "jg-28",
     "state": {
       "actors": {
@@ -4891,11 +4891,11 @@ window.PGH_JUNGLE = [
     "top": "neutro",
     "mid": "neutro",
     "bot": "neutro",
-    "obj": "Grubs UP · Drag UP · time todo top",
+    "obj": "Vastilarvas UP · Drag UP · time todo top",
     "ej": "fazendo drag solo",
     "opts": [
       [
-        "PEGAR GRUBS COM TIME",
+        "PEGAR VASTILARVAS COM TIME",
         "G"
       ],
       [
@@ -4911,7 +4911,7 @@ window.PGH_JUNGLE = [
         "O"
       ]
     ],
-    "exp": "Time todo top = Grubs grátis. Ivern não contesta drag solo contra jungler.",
+    "exp": "Time todo top = Vastilarvas grátis. Ivern não contesta drag solo contra jungler.",
     "id": "jg-42",
     "state": {
       "actors": {
@@ -5300,11 +5300,11 @@ window.PGH_JUNGLE = [
     "top": "inimigo top overextend",
     "mid": "neutro",
     "bot": "neutro",
-    "obj": "Grubs em 30s",
+    "obj": "Vastilarvas em 30s",
     "ej": "bot side",
     "opts": [
       [
-        "GANK TOP + GRUBS",
+        "GANK TOP + VASTILARVAS",
         "G"
       ],
       [
@@ -5320,7 +5320,7 @@ window.PGH_JUNGLE = [
         "R"
       ]
     ],
-    "exp": "Top overextend + Grubs perto + ele longe = sequência perfeita top side.",
+    "exp": "Top overextend + Vastilarvas perto + ele longe = sequência perfeita top side.",
     "id": "jg-45",
     "state": {
       "actors": {
@@ -5998,7 +5998,7 @@ window.PGH_JUNGLE = [
     "top": "neutro",
     "mid": "neutro",
     "bot": "wave crashando torre inimiga",
-    "obj": "Grubs/Drag 0:40, 1300g no bolso",
+    "obj": "Vastilarvas/Drag 0:40, 1300g no bolso",
     "ej": "resetando",
     "opts": [
       [

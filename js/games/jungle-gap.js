@@ -185,12 +185,13 @@ function tacticalMapSVG(sc,vm){
     svg+='</g>';
   }
   svg+='</g>';
-  const objectiveLabels={dragon:'DRAG',baron:'BARON',herald:'ARAUTO',grubs:'GRUBS',scuttleTop:'ARONG.',scuttleBot:'ARONG.',mark:'MARCA'};
+  const objectiveLabels={dragon:'DRAG',baron:'BARON',herald:'ARAUTO',grubs:'VASTILARVAS',scuttleTop:'ARONG.',scuttleBot:'ARONG.',mark:'MARCA'};
   svg+='<g class="jg-layer-objectives">';
   for(const [id,o] of Object.entries(vm.objectives))if(o.state==='UP'||o.state==='SPAWNING'){
     const x=o.x*1000,y=o.y*1000;
-    svg+='<g data-objective="'+esc(id)+'" data-state="'+o.state+'"><title>'+objectiveLabels[id]+'</title><circle cx="'+x+'" cy="'+y+'" r="29" fill="#07101c" stroke="#dfb5ff" stroke-width="3"/>';
-    svg+='<text x="'+x+'" y="'+(y+5)+'" text-anchor="middle" fill="#dfb5ff" font-size="14" font-weight="700" font-family="monospace">'+objectiveLabels[id]+'</text>';
+    svg+='<g data-objective="'+esc(id)+'" data-state="'+o.state+'"><title>'+objectiveLabels[id]+'</title>';
+    svg+=id==='grubs'?'<rect x="'+(x-72)+'" y="'+(y-20)+'" width="144" height="40" rx="10" fill="#07101c" stroke="#dfb5ff" stroke-width="3"/>':'<circle cx="'+x+'" cy="'+y+'" r="29" fill="#07101c" stroke="#dfb5ff" stroke-width="3"/>';
+    svg+='<text x="'+x+'" y="'+(y+5)+'" text-anchor="middle" fill="#dfb5ff" font-size="'+(id==='grubs'?20:14)+'" font-weight="700" font-family="monospace">'+objectiveLabels[id]+'</text>';
     if(o.seconds!==undefined)svg+='<text x="'+x+'" y="'+(y+47)+'" text-anchor="middle" fill="#fff" stroke="#07101c" stroke-width="4" paint-order="stroke" font-size="21">'+o.seconds+'s</text>';
     svg+='</g>';
   }

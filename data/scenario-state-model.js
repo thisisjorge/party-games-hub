@@ -6,7 +6,7 @@
   const LANES=['top','mid','bot'], ROLES=['TOP','JUNGLE','MID','ADC','SUPPORT'];
   const SPECIAL=new Set(['ROAMING','ROTATING','RESETTING','RECALLING','GANKING','DIVING','TAKING_OBJECTIVE','SETTING_OBJECTIVE','TAKING_DRAGON','TAKING_BARON','TAKING_GRUBS','INVADING','HOVERING','WARDING','CONTESTING','ACTIVE','VISIBLE','DEAD','MISSING','UNKNOWN','LAST_SEEN']);
   const HIDDEN=new Set(['MISSING','UNKNOWN','LAST_SEEN']);
-  const LABELS={FARMING:'farmando',PLAYING_WITH_WAVE:'com a wave',DEFENDING:'defendendo',CLEARING_WAVE:'limpando wave',FREEZING:'segurando freeze',ROAMING:'roamando',ROTATING:'rotacionando',RESETTING:'resetando',RECALLING:'canalizando recall',GANKING:'gankando',DIVING:'divando',TAKING_OBJECTIVE:'fazendo objetivo',SETTING_OBJECTIVE:'preparando objetivo',TAKING_DRAGON:'no dragão',TAKING_BARON:'no baron',TAKING_GRUBS:'nos grubs',INVADING:'invadindo',HOVERING:'dando cobertura',WARDING:'colocando visão',CONTESTING:'contestando',ACTIVE:'ativo',VISIBLE:'visível',DEAD:'morto',MISSING:'sumido',UNKNOWN:'sem visão',LAST_SEEN:'visto por último'};
+  const LABELS={FARMING:'farmando',PLAYING_WITH_WAVE:'com a wave',DEFENDING:'defendendo',CLEARING_WAVE:'limpando wave',FREEZING:'segurando freeze',ROAMING:'roamando',ROTATING:'rotacionando',RESETTING:'resetando',RECALLING:'canalizando recall',GANKING:'gankando',DIVING:'divando',TAKING_OBJECTIVE:'fazendo objetivo',SETTING_OBJECTIVE:'preparando objetivo',TAKING_DRAGON:'no dragão',TAKING_BARON:'no baron',TAKING_GRUBS:'nas vastilarvas',INVADING:'invadindo',HOVERING:'dando cobertura',WARDING:'colocando visão',CONTESTING:'contestando',ACTIVE:'ativo',VISIBLE:'visível',DEAD:'morto',MISSING:'sumido',UNKNOWN:'sem visão',LAST_SEEN:'visto por último'};
   const WAVE_RULES={
     NEUTRAL:{front:.50,blue:'FARMING',red:'FARMING',label:'NEUTRA'},
     BLUE_PUSHING:{front:.59,blue:'PLAYING_WITH_WAVE',red:'DEFENDING',label:'SEU TIME PUXANDO'},
@@ -18,7 +18,7 @@
     BLUE_SLOW_PUSH:{front:.55,blue:'PLAYING_WITH_WAVE',red:'DEFENDING',label:'SEU TIME SLOW PUSH'},
     RED_SLOW_PUSH:{front:.45,blue:'DEFENDING',red:'PLAYING_WITH_WAVE',label:'INIMIGO SLOW PUSH'}
   };
-  const DESTINATIONS={topRiver:'rio top',midRiver:'rio mid',botRiver:'rio bot',blueBase:'base azul',redBase:'base vermelha',grubsPit:'grubs',heraldPit:'arauto',dragonPit:'dragão',baronPit:'baron',grubsEntrance:'entrada dos grubs',blueTopJungle:'selva azul top',blueBotJungle:'selva azul bot',redTopJungle:'selva vermelha top',redBotJungle:'selva vermelha bot'};
+  const DESTINATIONS={topRiver:'rio top',midRiver:'rio mid',botRiver:'rio bot',blueBase:'base azul',redBase:'base vermelha',grubsPit:'vastilarvas',heraldPit:'arauto',dragonPit:'dragão',baronPit:'baron',grubsEntrance:'entrada das vastilarvas',blueTopJungle:'selva azul top',blueBotJungle:'selva azul bot',redTopJungle:'selva vermelha top',redBotJungle:'selva vermelha bot'};
   const clone=x=>JSON.parse(JSON.stringify(x));
   // Whitelist at the network boundary. Hidden true coordinates never enter the public VM.
   function publicState(state){
