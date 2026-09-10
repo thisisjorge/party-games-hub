@@ -1,0 +1,41 @@
+{
+  "games": {
+    "stop": {
+      "flow": "start/action/reveal/result/lobby",
+      "synchronizedScores": true
+    },
+    "fake": {
+      "flow": "start/action/reveal/result/lobby",
+      "synchronizedScores": true
+    },
+    "reflex": {
+      "flow": "start/action/reveal/result/lobby",
+      "synchronizedScores": true
+    },
+    "termo": {
+      "flow": "start/action/reveal/result/lobby",
+      "synchronizedScores": true
+    },
+    "riftle": {
+      "flow": "start/action/reveal/result/lobby",
+      "synchronizedScores": true
+    },
+    "wordbomb": {
+      "flow": "start/action/reveal/result/lobby",
+      "synchronizedScores": true
+    },
+    "jungle": {
+      "flow": "start/action/reveal/result/lobby",
+      "synchronizedScores": true
+    }
+  },
+  "players": 3,
+  "realPeers": true,
+  "partyMixFiveRounds": true,
+  "dailyRewardIdempotent": true,
+  "rematch": true,
+  "reconnectCancelsRoundToLobby": true,
+  "clientLeave": true,
+  "hostLeaveReturnsHome": true,
+  "errors": []
+}

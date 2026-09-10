@@ -1,0 +1,798 @@
+{
+  "anchors": {
+    "blueTopT1": {
+      "id": "blueTopT1",
+      "type": "T1",
+      "team": "blue",
+      "x": 0.12440191387559808,
+      "y": 0.31259968102073366,
+      "asset": "assets/structures/blue/t1.svg"
+    },
+    "blueTopT2": {
+      "id": "blueTopT2",
+      "type": "T2",
+      "team": "blue",
+      "x": 0.12200956937799043,
+      "y": 0.5478468899521531,
+      "asset": "assets/structures/blue/t2.svg"
+    },
+    "blueTopT3": {
+      "id": "blueTopT3",
+      "type": "T3",
+      "team": "blue",
+      "x": 0.12200956937799043,
+      "y": 0.6778309409888357,
+      "asset": "assets/structures/blue/t3.svg"
+    },
+    "blueTopInhib": {
+      "id": "blueTopInhib",
+      "type": "INHIBITOR",
+      "team": "blue",
+      "x": 0.12200956937799043,
+      "y": 0.733652312599681,
+      "asset": "assets/structures/blue/inhib.svg"
+    },
+    "blueMidT1": {
+      "id": "blueMidT1",
+      "type": "T1",
+      "team": "blue",
+      "x": 0.44178628389154706,
+      "y": 0.5629984051036683,
+      "asset": "assets/structures/blue/t1.svg"
+    },
+    "blueMidT2": {
+      "id": "blueMidT2",
+      "type": "T2",
+      "team": "blue",
+      "x": 0.36044657097288674,
+      "y": 0.6443381180223285,
+      "asset": "assets/structures/blue/t2.svg"
+    },
+    "blueMidT3": {
+      "id": "blueMidT3",
+      "type": "T3",
+      "team": "blue",
+      "x": 0.28309409888357256,
+      "y": 0.7208931419457735,
+      "asset": "assets/structures/blue/t3.svg"
+    },
+    "blueMidInhib": {
+      "id": "blueMidInhib",
+      "type": "INHIBITOR",
+      "team": "blue",
+      "x": 0.24162679425837322,
+      "y": 0.7655502392344498,
+      "asset": "assets/structures/blue/inhib.svg"
+    },
+    "blueBotT1": {
+      "id": "blueBotT1",
+      "type": "T1",
+      "team": "blue",
+      "x": 0.6874003189792663,
+      "y": 0.8835725677830941,
+      "asset": "assets/structures/blue/t1.svg"
+    },
+    "blueBotT2": {
+      "id": "blueBotT2",
+      "type": "T2",
+      "team": "blue",
+      "x": 0.47208931419457734,
+      "y": 0.8835725677830941,
+      "asset": "assets/structures/blue/t2.svg"
+    },
+    "blueBotT3": {
+      "id": "blueBotT3",
+      "type": "T3",
+      "team": "blue",
+      "x": 0.3133971291866029,
+      "y": 0.8835725677830941,
+      "asset": "assets/structures/blue/t3.svg"
+    },
+    "blueBotInhib": {
+      "id": "blueBotInhib",
+      "type": "INHIBITOR",
+      "team": "blue",
+      "x": 0.2535885167464115,
+      "y": 0.8835725677830941,
+      "asset": "assets/structures/blue/inhib.svg"
+    },
+    "redTopT1": {
+      "id": "redTopT1",
+      "type": "T1",
+      "team": "red",
+      "x": 0.31259968102073366,
+      "y": 0.11961722488038277,
+      "asset": "assets/structures/red/t1.svg"
+    },
+    "redTopT2": {
+      "id": "redTopT2",
+      "type": "T2",
+      "team": "red",
+      "x": 0.5478468899521531,
+      "y": 0.11961722488038277,
+      "asset": "assets/structures/red/t2.svg"
+    },
+    "redTopT3": {
+      "id": "redTopT3",
+      "type": "T3",
+      "team": "red",
+      "x": 0.6778309409888357,
+      "y": 0.11961722488038277,
+      "asset": "assets/structures/red/t3.svg"
+    },
+    "redTopInhib": {
+      "id": "redTopInhib",
+      "type": "INHIBITOR",
+      "team": "red",
+      "x": 0.7376395534290271,
+      "y": 0.11961722488038277,
+      "asset": "assets/structures/red/inhib.svg"
+    },
+    "redMidT1": {
+      "id": "redMidT1",
+      "type": "T1",
+      "team": "red",
+      "x": 0.5781499202551834,
+      "y": 0.44258373205741625,
+      "asset": "assets/structures/red/t1.svg"
+    },
+    "redMidT2": {
+      "id": "redMidT2",
+      "type": "T2",
+      "team": "red",
+      "x": 0.6562998405103668,
+      "y": 0.36443381180223283,
+      "asset": "assets/structures/red/t2.svg"
+    },
+    "redMidT3": {
+      "id": "redMidT3",
+      "type": "T3",
+      "team": "red",
+      "x": 0.7272727272727273,
+      "y": 0.2934609250398724,
+      "asset": "assets/structures/red/t3.svg"
+    },
+    "redMidInhib": {
+      "id": "redMidInhib",
+      "type": "INHIBITOR",
+      "team": "red",
+      "x": 0.7703349282296651,
+      "y": 0.24880382775119617,
+      "asset": "assets/structures/red/inhib.svg"
+    },
+    "redBotT1": {
+      "id": "redBotT1",
+      "type": "T1",
+      "team": "red",
+      "x": 0.8827751196172249,
+      "y": 0.6874003189792663,
+      "asset": "assets/structures/red/t1.svg"
+    },
+    "redBotT2": {
+      "id": "redBotT2",
+      "type": "T2",
+      "team": "red",
+      "x": 0.8827751196172249,
+      "y": 0.47208931419457734,
+      "asset": "assets/structures/red/t2.svg"
+    },
+    "redBotT3": {
+      "id": "redBotT3",
+      "type": "T3",
+      "team": "red",
+      "x": 0.8827751196172249,
+      "y": 0.3149920255183413,
+      "asset": "assets/structures/red/t3.svg"
+    },
+    "redBotInhib": {
+      "id": "redBotInhib",
+      "type": "INHIBITOR",
+      "team": "red",
+      "x": 0.8827751196172249,
+      "y": 0.2551834130781499,
+      "asset": "assets/structures/red/inhib.svg"
+    },
+    "blueNexusTowerA": {
+      "id": "blueNexusTowerA",
+      "type": "NEXUS_TURRET",
+      "team": "blue",
+      "x": 0.15789473684210525,
+      "y": 0.810207336523126,
+      "asset": "assets/structures/blue/nexus-tower.svg"
+    },
+    "blueNexusTowerB": {
+      "id": "blueNexusTowerB",
+      "type": "NEXUS_TURRET",
+      "team": "blue",
+      "x": 0.20414673046251994,
+      "y": 0.8564593301435407,
+      "asset": "assets/structures/blue/nexus-tower.svg"
+    },
+    "blueNexus": {
+      "id": "blueNexus",
+      "type": "NEXUS",
+      "team": "blue",
+      "x": 0.13875598086124402,
+      "y": 0.8819776714513556,
+      "asset": "assets/structures/blue/nexus.svg"
+    },
+    "redNexusTowerA": {
+      "id": "redNexusTowerA",
+      "type": "NEXUS_TURRET",
+      "team": "red",
+      "x": 0.8014354066985646,
+      "y": 0.15550239234449761,
+      "asset": "assets/structures/red/nexus-tower.svg"
+    },
+    "redNexusTowerB": {
+      "id": "redNexusTowerB",
+      "type": "NEXUS_TURRET",
+      "team": "red",
+      "x": 0.8532695374800638,
+      "y": 0.20733652312599682,
+      "asset": "assets/structures/red/nexus-tower.svg"
+    },
+    "redNexus": {
+      "id": "redNexus",
+      "type": "NEXUS",
+      "team": "red",
+      "x": 0.8771929824561403,
+      "y": 0.13237639553429026,
+      "asset": "assets/structures/red/nexus.svg"
+    }
+  },
+  "sizes": {
+    "T1": 73.4,
+    "T2": 67.56,
+    "T3": 67.56,
+    "INHIBITOR": 63.28,
+    "NEXUS_TURRET": 56.4,
+    "NEXUS": 67.56
+  },
+  "pits": {
+    "heraldPitAnchor": {
+      "x": 0.3492822966507177,
+      "y": 0.3141945773524721
+    },
+    "baronPitAnchor": {
+      "x": 0.3492822966507177,
+      "y": 0.3141945773524721
+    },
+    "dragonPitAnchor": {
+      "x": 0.6610845295055822,
+      "y": 0.6881977671451356
+    },
+    "grubsAnchor": {
+      "x": 0.3492822966507177,
+      "y": 0.3141945773524721
+    },
+    "topScuttleAnchor": {
+      "x": 0.2647527910685805,
+      "y": 0.36044657097288674
+    },
+    "botScuttleAnchor": {
+      "x": 0.7312599681020734,
+      "y": 0.7527910685805422
+    }
+  },
+  "terrainPixels": [
+    {
+      "id": "blueTopT1",
+      "type": "T1",
+      "team": "blue",
+      "x": 0.12440191387559808,
+      "y": 0.31259968102073366,
+      "asset": "assets/structures/blue/t1.svg",
+      "pixel": [
+        156,
+        392
+      ],
+      "rgb": [
+        153,
+        166,
+        110
+      ]
+    },
+    {
+      "id": "blueTopT2",
+      "type": "T2",
+      "team": "blue",
+      "x": 0.12200956937799043,
+      "y": 0.5478468899521531,
+      "asset": "assets/structures/blue/t2.svg",
+      "pixel": [
+        153,
+        687
+      ],
+      "rgb": [
+        153,
+        165,
+        109
+      ]
+    },
+    {
+      "id": "blueTopT3",
+      "type": "T3",
+      "team": "blue",
+      "x": 0.12200956937799043,
+      "y": 0.6778309409888357,
+      "asset": "assets/structures/blue/t3.svg",
+      "pixel": [
+        153,
+        850
+      ],
+      "rgb": [
+        112,
+        164,
+        174
+      ]
+    },
+    {
+      "id": "blueTopInhib",
+      "type": "INHIBITOR",
+      "team": "blue",
+      "x": 0.12200956937799043,
+      "y": 0.733652312599681,
+      "asset": "assets/structures/blue/inhib.svg",
+      "pixel": [
+        153,
+        920
+      ],
+      "rgb": [
+        113,
+        165,
+        177
+      ]
+    },
+    {
+      "id": "blueMidT1",
+      "type": "T1",
+      "team": "blue",
+      "x": 0.44178628389154706,
+      "y": 0.5629984051036683,
+      "asset": "assets/structures/blue/t1.svg",
+      "pixel": [
+        554,
+        706
+      ],
+      "rgb": [
+        152,
+        165,
+        107
+      ]
+    },
+    {
+      "id": "blueMidT2",
+      "type": "T2",
+      "team": "blue",
+      "x": 0.36044657097288674,
+      "y": 0.6443381180223285,
+      "asset": "assets/structures/blue/t2.svg",
+      "pixel": [
+        452,
+        808
+      ],
+      "rgb": [
+        152,
+        167,
+        110
+      ]
+    },
+    {
+      "id": "blueMidT3",
+      "type": "T3",
+      "team": "blue",
+      "x": 0.28309409888357256,
+      "y": 0.7208931419457735,
+      "asset": "assets/structures/blue/t3.svg",
+      "pixel": [
+        355,
+        904
+      ],
+      "rgb": [
+        110,
+        162,
+        175
+      ]
+    },
+    {
+      "id": "blueMidInhib",
+      "type": "INHIBITOR",
+      "team": "blue",
+      "x": 0.24162679425837322,
+      "y": 0.7655502392344498,
+      "asset": "assets/structures/blue/inhib.svg",
+      "pixel": [
+        303,
+        960
+      ],
+      "rgb": [
+        108,
+        160,
+        171
+      ]
+    },
+    {
+      "id": "blueBotT1",
+      "type": "T1",
+      "team": "blue",
+      "x": 0.6874003189792663,
+      "y": 0.8835725677830941,
+      "asset": "assets/structures/blue/t1.svg",
+      "pixel": [
+        862,
+        1108
+      ],
+      "rgb": [
+        152,
+        165,
+        108
+      ]
+    },
+    {
+      "id": "blueBotT2",
+      "type": "T2",
+      "team": "blue",
+      "x": 0.47208931419457734,
+      "y": 0.8835725677830941,
+      "asset": "assets/structures/blue/t2.svg",
+      "pixel": [
+        592,
+        1108
+      ],
+      "rgb": [
+        151,
+        165,
+        108
+      ]
+    },
+    {
+      "id": "blueBotT3",
+      "type": "T3",
+      "team": "blue",
+      "x": 0.3133971291866029,
+      "y": 0.8835725677830941,
+      "asset": "assets/structures/blue/t3.svg",
+      "pixel": [
+        393,
+        1108
+      ],
+      "rgb": [
+        111,
+        161,
+        177
+      ]
+    },
+    {
+      "id": "blueBotInhib",
+      "type": "INHIBITOR",
+      "team": "blue",
+      "x": 0.2535885167464115,
+      "y": 0.8835725677830941,
+      "asset": "assets/structures/blue/inhib.svg",
+      "pixel": [
+        318,
+        1108
+      ],
+      "rgb": [
+        98,
+        148,
+        164
+      ]
+    },
+    {
+      "id": "redTopT1",
+      "type": "T1",
+      "team": "red",
+      "x": 0.31259968102073366,
+      "y": 0.11961722488038277,
+      "asset": "assets/structures/red/t1.svg",
+      "pixel": [
+        392,
+        150
+      ],
+      "rgb": [
+        153,
+        165,
+        109
+      ]
+    },
+    {
+      "id": "redTopT2",
+      "type": "T2",
+      "team": "red",
+      "x": 0.5478468899521531,
+      "y": 0.11961722488038277,
+      "asset": "assets/structures/red/t2.svg",
+      "pixel": [
+        687,
+        150
+      ],
+      "rgb": [
+        152,
+        165,
+        107
+      ]
+    },
+    {
+      "id": "redTopT3",
+      "type": "T3",
+      "team": "red",
+      "x": 0.6778309409888357,
+      "y": 0.11961722488038277,
+      "asset": "assets/structures/red/t3.svg",
+      "pixel": [
+        850,
+        150
+      ],
+      "rgb": [
+        95,
+        149,
+        159
+      ]
+    },
+    {
+      "id": "redTopInhib",
+      "type": "INHIBITOR",
+      "team": "red",
+      "x": 0.7376395534290271,
+      "y": 0.11961722488038277,
+      "asset": "assets/structures/red/inhib.svg",
+      "pixel": [
+        925,
+        150
+      ],
+      "rgb": [
+        110,
+        161,
+        173
+      ]
+    },
+    {
+      "id": "redMidT1",
+      "type": "T1",
+      "team": "red",
+      "x": 0.5781499202551834,
+      "y": 0.44258373205741625,
+      "asset": "assets/structures/red/t1.svg",
+      "pixel": [
+        725,
+        555
+      ],
+      "rgb": [
+        153,
+        165,
+        108
+      ]
+    },
+    {
+      "id": "redMidT2",
+      "type": "T2",
+      "team": "red",
+      "x": 0.6562998405103668,
+      "y": 0.36443381180223283,
+      "asset": "assets/structures/red/t2.svg",
+      "pixel": [
+        823,
+        457
+      ],
+      "rgb": [
+        153,
+        166,
+        109
+      ]
+    },
+    {
+      "id": "redMidT3",
+      "type": "T3",
+      "team": "red",
+      "x": 0.7272727272727273,
+      "y": 0.2934609250398724,
+      "asset": "assets/structures/red/t3.svg",
+      "pixel": [
+        912,
+        368
+      ],
+      "rgb": [
+        96,
+        150,
+        162
+      ]
+    },
+    {
+      "id": "redMidInhib",
+      "type": "INHIBITOR",
+      "team": "red",
+      "x": 0.7703349282296651,
+      "y": 0.24880382775119617,
+      "asset": "assets/structures/red/inhib.svg",
+      "pixel": [
+        966,
+        312
+      ],
+      "rgb": [
+        100,
+        156,
+        168
+      ]
+    },
+    {
+      "id": "redBotT1",
+      "type": "T1",
+      "team": "red",
+      "x": 0.8827751196172249,
+      "y": 0.6874003189792663,
+      "asset": "assets/structures/red/t1.svg",
+      "pixel": [
+        1107,
+        862
+      ],
+      "rgb": [
+        153,
+        166,
+        109
+      ]
+    },
+    {
+      "id": "redBotT2",
+      "type": "T2",
+      "team": "red",
+      "x": 0.8827751196172249,
+      "y": 0.47208931419457734,
+      "asset": "assets/structures/red/t2.svg",
+      "pixel": [
+        1107,
+        592
+      ],
+      "rgb": [
+        151,
+        165,
+        108
+      ]
+    },
+    {
+      "id": "redBotT3",
+      "type": "T3",
+      "team": "red",
+      "x": 0.8827751196172249,
+      "y": 0.3149920255183413,
+      "asset": "assets/structures/red/t3.svg",
+      "pixel": [
+        1107,
+        395
+      ],
+      "rgb": [
+        109,
+        161,
+        174
+      ]
+    },
+    {
+      "id": "redBotInhib",
+      "type": "INHIBITOR",
+      "team": "red",
+      "x": 0.8827751196172249,
+      "y": 0.2551834130781499,
+      "asset": "assets/structures/red/inhib.svg",
+      "pixel": [
+        1107,
+        320
+      ],
+      "rgb": [
+        106,
+        160,
+        172
+      ]
+    },
+    {
+      "id": "blueNexusTowerA",
+      "type": "NEXUS_TURRET",
+      "team": "blue",
+      "x": 0.15789473684210525,
+      "y": 0.810207336523126,
+      "asset": "assets/structures/blue/nexus-tower.svg",
+      "pixel": [
+        198,
+        1016
+      ],
+      "rgb": [
+        95,
+        149,
+        159
+      ]
+    },
+    {
+      "id": "blueNexusTowerB",
+      "type": "NEXUS_TURRET",
+      "team": "blue",
+      "x": 0.20414673046251994,
+      "y": 0.8564593301435407,
+      "asset": "assets/structures/blue/nexus-tower.svg",
+      "pixel": [
+        256,
+        1074
+      ],
+      "rgb": [
+        96,
+        149,
+        159
+      ]
+    },
+    {
+      "id": "blueNexus",
+      "type": "NEXUS",
+      "team": "blue",
+      "x": 0.13875598086124402,
+      "y": 0.8819776714513556,
+      "asset": "assets/structures/blue/nexus.svg",
+      "pixel": [
+        174,
+        1106
+      ],
+      "rgb": [
+        109,
+        160,
+        171
+      ]
+    },
+    {
+      "id": "redNexusTowerA",
+      "type": "NEXUS_TURRET",
+      "team": "red",
+      "x": 0.8014354066985646,
+      "y": 0.15550239234449761,
+      "asset": "assets/structures/red/nexus-tower.svg",
+      "pixel": [
+        1005,
+        195
+      ],
+      "rgb": [
+        77,
+        130,
+        146
+      ]
+    },
+    {
+      "id": "redNexusTowerB",
+      "type": "NEXUS_TURRET",
+      "team": "red",
+      "x": 0.8532695374800638,
+      "y": 0.20733652312599682,
+      "asset": "assets/structures/red/nexus-tower.svg",
+      "pixel": [
+        1070,
+        260
+      ],
+      "rgb": [
+        66,
+        119,
+        139
+      ]
+    },
+    {
+      "id": "redNexus",
+      "type": "NEXUS",
+      "team": "red",
+      "x": 0.8771929824561403,
+      "y": 0.13237639553429026,
+      "asset": "assets/structures/red/nexus.svg",
+      "pixel": [
+        1100,
+        166
+      ],
+      "rgb": [
+        107,
+        158,
+        169
+      ]
+    }
+  ],
+  "ordering": "PASS: all six lanes",
+  "catalogMaps": 52,
+  "scaleComparisons": [
+    "before",
+    "low",
+    "high",
+    "final"
+  ]
+}

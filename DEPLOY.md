@@ -29,3 +29,11 @@ O botão de diagnóstico permite copiar versão, estado de conexão e erros rece
 ## Reverter
 
 Use uma implantação anterior no painel Pages ou gere novamente a tag anterior e envie os dois diretórios. Preserve o mesmo `PGH_HUB_URL` ao reconstruir. A tag `pre-rc1-final-pass` preserva o ponto de segurança local anterior à calibração final.
+
+## Sites desta RC1
+
+- Hub: https://party-games-hub-jorge.pages.dev (`party-games-hub-jorge`).
+- Jungle: https://jungle-gap-jorge.pages.dev (`jungle-gap-jorge`).
+- Fonte: https://github.com/thisisjorge/party-games-hub (privado).
+
+Wrangler usado: 4.130.0, com acesso somente de leitura de conta/usuário e escrita em Pages. Na criação inicial, essa versão tentou delegar para Workers; os projetos foram criados explicitamente no Pages. Atualizações destes projetos existentes usam `pages deploy` normalmente, sem ampliar permissões.

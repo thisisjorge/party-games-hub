@@ -1,0 +1,831 @@
+{
+  "assets": [
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/0640890476fc1198.woff2",
+      "status": 200,
+      "sha256": "0640890476fc1198ab4de571fb658de443c4d85b66466ec09534a8737ab1ce9d"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/41e6b9f297f7d9a2.woff2",
+      "status": 200,
+      "sha256": "41e6b9f297f7d9a2df2aaa274092f76d2f72711a15ca455f7f4f4f92caf16b72"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/156613c5046a53d5.woff2",
+      "status": 200,
+      "sha256": "156613c5046a53d54b6a7c45bf088f3f0d66ccaf486f24f3e45489bb9e7ceb84"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/36ad966cb653de70.woff2",
+      "status": 200,
+      "sha256": "36ad966cb653de70ba37355c41003b02de8940b2df6cbcd46480a6ad8cadd65d"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/0d405c8eaad8bf29.woff2",
+      "status": 200,
+      "sha256": "0d405c8eaad8bf29383d68552d17ce01b2abc704f2c66753625bb38f5307a436"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/3b237255d05e4016.woff2",
+      "status": 200,
+      "sha256": "3b237255d05e401601c1c566a5d65aeb1a65c65eea514e2ec0130cc9de0b5a96"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/3c7df3a15e173b8f.woff2",
+      "status": 200,
+      "sha256": "3c7df3a15e173b8fa04ec9191171e72c314ddbac1b395e2b2e2092bb4f47cc8c"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/7d75be85dd1627e2.woff2",
+      "status": 200,
+      "sha256": "7d75be85dd1627e27ec151e9a3701e661bc4f8c2a93611bdd92f3a05d6bbd942"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/504a451bb8dd3da7.woff2",
+      "status": 200,
+      "sha256": "504a451bb8dd3da76d6ccba3fbee72ed5d40745857b1d2094469e8e72d2b7451"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/54aa4ca0e3ae0ace.woff2",
+      "status": 200,
+      "sha256": "54aa4ca0e3ae0ace71b1ec1390b59441426857e0e4f23aa2dd1cef92f38f5793"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/5e6545c4da217343.woff2",
+      "status": 200,
+      "sha256": "5e6545c4da21734334bcf06853ef74df582737ae23682f8278fe9f1ba70908cc"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/665c4dd9134f458a.woff2",
+      "status": 200,
+      "sha256": "665c4dd9134f458a347a3e41ae2aaf8440ad0f11229c064257aeaccf561be39a"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/7031f2d8ae9189b2.woff2",
+      "status": 200,
+      "sha256": "7031f2d8ae9189b2abb191a31dda0525d831c1bc48f2252b379f9aa218b16eee"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/afec86997fdaf54a.woff2",
+      "status": 200,
+      "sha256": "afec86997fdaf54af1f59358fa2c1e2a0f1d04146edad18e5cd141d0384a7548"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/a5888696e9eb1b4b.woff2",
+      "status": 200,
+      "sha256": "a5888696e9eb1b4bbbecc8eb3922b8369f49d4bddb72263e033cbd17f399be76"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/ce5095dc1cb200aa.woff2",
+      "status": 200,
+      "sha256": "ce5095dc1cb200aaa939e38067a0677018d10e9f26ec38cdcf1557ac524fc775"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/8895e3d49825128b.woff2",
+      "status": 200,
+      "sha256": "8895e3d49825128bfa5238e4c96e9b432d7a3dadbe5c17c6081267398305dc71"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/952dddb45d2f96f7.woff2",
+      "status": 200,
+      "sha256": "952dddb45d2f96f71cbf3b7f510b24379afc3c89ea02fcf89d377b45d62c0166"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/954380ff6f96dcb0.woff2",
+      "status": 200,
+      "sha256": "954380ff6f96dcb0cde857bb1cb906401908729cfbdd98140174bb1965f025c7"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/9b5e78c74ecfb3de.woff2",
+      "status": 200,
+      "sha256": "9b5e78c74ecfb3dee9381130d1528208b6146a0dc18524e6d14a0cb761a4acdd"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/c2a20dcb95ec8f4d.woff2",
+      "status": 200,
+      "sha256": "c2a20dcb95ec8f4d1e8db6bd01dfedb669913f5e691e7baa3981b2d88a3b9ae3"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/eb128c93678bd6b0.woff2",
+      "status": 200,
+      "sha256": "eb128c93678bd6b08fc3f0a7b5a44e73a6a4e374d0f449f9d26cf8ad48964d40"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/df0ee4f9fdbffea8.woff2",
+      "status": 200,
+      "sha256": "df0ee4f9fdbffea8f81c03d950be8f78a606ad9fa8a94252202faaf95bd6d9ec"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/blue/inhib.svg",
+      "status": 200,
+      "sha256": "fb047d52368a5934bd089c91650e9364f6a668133bae7358cec550945988e179"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/fb54a8f8c24cd5c5.woff2",
+      "status": 200,
+      "sha256": "fb54a8f8c24cd5c532c5d52ece3d82b9a08ed83bad076446b938f8f50353753f"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/maps/terrain-base.png",
+      "status": 200,
+      "sha256": "33c52e5e3a799277dd992d14cc0b7e8fdc483fd051f2855497141b434116dd86"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/fonts/f03a0f55c5656087.woff2",
+      "status": 200,
+      "sha256": "f03a0f55c5656087fe99bfa0c5d64b613c26af5e95aeaa458746318bbe854ba3"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/blue/nexus-tower.svg",
+      "status": 200,
+      "sha256": "8841238f92aaba1b10346bcbee6b1ec6e8e135dd1f366b5bb92fcaef7c8f0b71"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/blue/nexus.svg",
+      "status": 200,
+      "sha256": "da42db720b064f44260d94319d46bf87101f46913ac97f4b72ae221d88389757"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/blue/t1.svg",
+      "status": 200,
+      "sha256": "db293107784d5246f349dfec88404ba22f17dfed7cadc4444c93aa98cb95dcc8"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/blue/t2.svg",
+      "status": 200,
+      "sha256": "13cce421f798dadd92827c1e6fec4be7ed73086ecec83ee9f31cda629a9ace6e"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/blue/t3.svg",
+      "status": 200,
+      "sha256": "3c29c3a03e946d4b37ae796cd489ebd702186a176297a1cfef229e6df9b3ac44"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/red/inhib.svg",
+      "status": 200,
+      "sha256": "684946ee4c92d78733ec7aa5a351097316714665333935075b71a9f375c711c7"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/red/nexus-tower.svg",
+      "status": 200,
+      "sha256": "0ee27ba9130a276b2ee73812886ed6a3db79b83e5d28194a98bf246eecffc5d8"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/red/nexus.svg",
+      "status": 200,
+      "sha256": "a40414d664df8ecf1b20e7c14dc68e77b0abf7ad6b55bd61da2459a41bfbd545"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/red/t1.svg",
+      "status": 200,
+      "sha256": "d23402eb9f82df31394dff822b073267b0f47035e4c6bd97d009a57f8eebd6f7"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/red/t2.svg",
+      "status": 200,
+      "sha256": "73fa4a3ac107513c1fad344dfe395d59df0bf29248662f26034ff6ac91888a28"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/structures/red/t3.svg",
+      "status": 200,
+      "sha256": "63de8f7f8f5ff8a5961a55147978cb3e0b914d7a41246441ff055473b8d1c438"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "css/arcade.css",
+      "status": 200,
+      "sha256": "70999c1e28da6c8f6b0d55260e476820036f3476bff4f0deb51aeaba9f96bf22"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "config.js",
+      "status": 200,
+      "sha256": "de4c0daba7846c46bed46b28737498c0d7a3d726b1a13c641293b5f61a586931"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "css/base.css",
+      "status": 200,
+      "sha256": "cfb8b5d734831f467ca2c6ac356490bf861e1aa9d58cd2b66f3208cc83cf25f2"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "css/cast.css",
+      "status": 200,
+      "sha256": "2b1055577899b38f2a079e0494cea799ea12a386614efb402dfc19e4848a9443"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/vendor/peerjs.js",
+      "status": 200,
+      "sha256": "ad5d8870d1e389914f9cba8d35be313c4327c69ee0a221e482e9bf7621136fe5"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "css/daily.css",
+      "status": 200,
+      "sha256": "26856c8c76933d05078ca9270a4efc87ee8e3ae5662572bf514c89594dfc9a14"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "css/lobby.css",
+      "status": 200,
+      "sha256": "1c2cb8cc330f4d4b4f54b943773d1d3ca464b178d311509ca875ffbcaabb7259"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "css/fonts.css",
+      "status": 200,
+      "sha256": "edf6ea62f339a03d441958ce5cc6a4a156c46c09adfa1a4e3ed7d3372fb78b0d"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "css/games.css",
+      "status": 200,
+      "sha256": "bc8263e35d3b495b85796981a18149fff611d373f09f10a1a140bc236f4762e1"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "css/rc1.css",
+      "status": 200,
+      "sha256": "e0920e367c03ffa6aa076e1320c3e101a4461e547415d4ed04e77f6c00af5433"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "assets/vendor/lucide.js",
+      "status": 200,
+      "sha256": "4389f41fdadf70153bf3f258629e91b2216afdb321e078c33ceb772421a907b4"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/jungle-structures.js",
+      "status": 200,
+      "sha256": "9d26b859ca41b0c0d8a6f6dd0bf31cc32ac81dd06760b736ddcf6b8035fe4127"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/characters.js",
+      "status": 200,
+      "sha256": "6d09c1b9ab267a83fbae19e37136887902da7365f35a4b588f4d1cc3d57c1d32"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/fake-questions.js",
+      "status": 200,
+      "sha256": "14ad71c62da2da25b531b9f7595520046c8e9b87bcdb02e0e4a3a119087dae04"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/lane-geometry.js",
+      "status": 200,
+      "sha256": "72684230d55756aa49db56227e5e3bf56774befa79b3cd97a0f43e59eecca07c"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/jungle-scenarios.js",
+      "status": 200,
+      "sha256": "92bdf8bd802900e034be78fe86cff4842214b895374b946e325ddfdea5e0a292"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/lol-champions.js",
+      "status": 200,
+      "sha256": "718aa0940c0f4fc39b15318ee3a641db910b0b82f5b37e6f6d0da5c72f5b6dd1"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/termo-words.js",
+      "status": 200,
+      "sha256": "f3b6e4bfa8158f00e671dcae924ba2cef67067916b3dd197bb15a60a3fb45846"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/portuguese-words.js",
+      "status": 200,
+      "sha256": "66fba3678d5e1b1ae56b8fab0ceec720123b448590e0dc1960c2dbeeaaa8bae2"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/scenario-state-model.js",
+      "status": 200,
+      "sha256": "175f54e8179dc65b1d683b39139fb92571dc485a521327a1f91702a07fe580b7"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "css/solo.css",
+      "status": 200,
+      "sha256": "4cad63bc690551f22df86b390bb9ee210db1167fc7a4221e570da76124167d21"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/achievements.js",
+      "status": 200,
+      "sha256": "4d88aafe01d23be40ec7be4137ea185394f8081926be40b7370d6a6b60713233"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/app.js",
+      "status": 200,
+      "sha256": "4ad630e0a93d069835cf0d96d316c8856580067f4291ffae5633786f54fe0241"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/audio.js",
+      "status": 200,
+      "sha256": "b82f676094e6cc07894944719577808f5629b2dd9b49dcf8c394034938a56a56"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/characters.js",
+      "status": 200,
+      "sha256": "1e88ff680635a7589b26635f86cbc61e55a2f821bb8597056c69cd22863db2cc"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "index.html",
+      "status": 200,
+      "sha256": "3ddeab420b2a66d8bc386d0d6d1dc948d4efbdc188f223731fbc80d23fbad857"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/diagnostics.js",
+      "status": 200,
+      "sha256": "2568d0a75971e7ee70a0d3f34f0308ff4de02c126d4fb99b3b8eb109cd01fe53"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/game-manager.js",
+      "status": 200,
+      "sha256": "aeef3a0a50f59ce17cd5cdeaea28cdb942bf488120400c9e7a59009b8059658d"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/daily.js",
+      "status": 200,
+      "sha256": "430cbd7356870bf1249342eb812e5ff68bfa2c8b782ba3ed203a2a355cb89b26"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/chat.js",
+      "status": 200,
+      "sha256": "a2927730d1dbe2e6c0fdcd9d5a5d7f659ba7d08f26e896d0b12a15da1ad13d3d"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/games/fake-answer.js",
+      "status": 200,
+      "sha256": "6700845470133711a117172ae51a12184307beecb19202db0e173d5593e0c82a"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/games/jungle-gap.js",
+      "status": 200,
+      "sha256": "bba99f1993011948066d14a8ded844616eaf6c62f471180974098eef44c63c28"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/games/party-common.js",
+      "status": 200,
+      "sha256": "99ebcca99ec9cc4735a1497b6cc0e79207dedda5ed68780960174addb820e48f"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/games/reflex-rush.js",
+      "status": 200,
+      "sha256": "0f6802089bf2b5e5925daf64c1b655567f9aa41424f3b1338369f1985d0d0bac"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/games/riftle.js",
+      "status": 200,
+      "sha256": "55c84458e19842d7015d4d7312fa42be1478264f7bd011d648cc2491a4d8d3f0"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/games/stop.js",
+      "status": 200,
+      "sha256": "ead299b506df1e9248cc6b5feb8c0b3d1ba9e47f777b106f6178886a69d640f8"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/games/termo.js",
+      "status": 200,
+      "sha256": "051bdcd5691707d68073f1d787bb3ca3217c80eba2211b32453635a6133a608e"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/games/wordbomb.js",
+      "status": 200,
+      "sha256": "85440338fc57a7e0e3c0a0fb8147f5bf42d470cd95d55ee48152760cfc7a7a14"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/map-debug.js",
+      "status": 200,
+      "sha256": "4dd906189c68512aee8482250f392321a20e4b881616c372abb560a42dcbaf91"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/profile.js",
+      "status": 200,
+      "sha256": "263fb9aa4faed47efb2531a836798fabe42c831ec07a418967cc3ac1734bb2fb"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/multiplayer.js",
+      "status": 200,
+      "sha256": "84b86f423cc10765e8d73451d428f7580ec526718b58cb1b4ec7cfb9e6914d7f"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/rooms.js",
+      "status": 200,
+      "sha256": "f6c33cdb0f0683c6c5d39ea6ef3e88d4d71942f900be653c4a3a40b4a4ed5772"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/jungle-solo.js",
+      "status": 200,
+      "sha256": "aa06448c46de1c0f223f156a35069cebd833a230542c4137e184d56d4bfab912"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/state.js",
+      "status": 200,
+      "sha256": "c81110aaed29f5b81ca1c112f227229e8bc5030d4cc95e86d89b42ab1b7f2d04"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/storage.js",
+      "status": 200,
+      "sha256": "7ea48ec1a3032bea284bcf9dccc2e7875b0663004691401f46e430b72b4986cc"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/ui.js",
+      "status": 200,
+      "sha256": "4c99a2c6e8db66aacbe0d392125bd8b8fd8dc6b08782c9239cd92c29cfe72d8c"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "js/solo-bootstrap.js",
+      "status": 200,
+      "sha256": "5faf9a7f4d86f1fcd2a475c9b5996b5d0e45bfe2512d2830abd0e34085e33dac"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "licenses/ChakraPetch-OFL.txt",
+      "status": 200,
+      "sha256": "13831d02389d917d22fcfa6c79f98f8acbf61d230add0e73a4d4dc5f3bfb9e56"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "licenses/Lucide-ISC.txt",
+      "status": 200,
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "data/wordbomb-lexicon.js",
+      "status": 200,
+      "sha256": "44bb9f0f31c81b13c2244ed6b77545bb745693be25ceeb4fb9e856f25728b828"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "jungle.html",
+      "status": 200,
+      "sha256": "9a0a2f6a968faa9c87a6a360d6c4b41d85180a1c2834d456e522e471933dd6bd"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "licenses/PeerJS-MIT.txt",
+      "status": 200,
+      "sha256": "9407807dba7f47a79bfb3ac55759d63d77c9371ebd0616d5a093e97d3e810397"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "licenses/Portuguese-MPL-2.0.txt",
+      "status": 200,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "licenses/ShareTechMono-OFL.txt",
+      "status": 200,
+      "sha256": "9d96f445b6e9c701428811d0177f894874f8d6f07ecc30d568c506542368f3ff"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "licenses/PressStart2P-OFL.txt",
+      "status": 200,
+      "sha256": "705960c3281a5765ecc0b59bd4ed7ca59eed165748076bc2fc3e8fdbfeb944b0"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "licenses/SpaceGrotesk-OFL.txt",
+      "status": 200,
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72"
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "file": "THIRD-PARTY.md",
+      "status": 200,
+      "sha256": "4a205aa24a24349fc59f1f07585cfdb7175aa4e1b8453889e786be406f5a4c56"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/maps/terrain-base.png",
+      "status": 200,
+      "sha256": "33c52e5e3a799277dd992d14cc0b7e8fdc483fd051f2855497141b434116dd86"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/blue/nexus-tower.svg",
+      "status": 200,
+      "sha256": "8841238f92aaba1b10346bcbee6b1ec6e8e135dd1f366b5bb92fcaef7c8f0b71"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/blue/nexus.svg",
+      "status": 200,
+      "sha256": "da42db720b064f44260d94319d46bf87101f46913ac97f4b72ae221d88389757"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/blue/inhib.svg",
+      "status": 200,
+      "sha256": "fb047d52368a5934bd089c91650e9364f6a668133bae7358cec550945988e179"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/blue/t1.svg",
+      "status": 200,
+      "sha256": "db293107784d5246f349dfec88404ba22f17dfed7cadc4444c93aa98cb95dcc8"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/blue/t2.svg",
+      "status": 200,
+      "sha256": "13cce421f798dadd92827c1e6fec4be7ed73086ecec83ee9f31cda629a9ace6e"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/blue/t3.svg",
+      "status": 200,
+      "sha256": "3c29c3a03e946d4b37ae796cd489ebd702186a176297a1cfef229e6df9b3ac44"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/red/inhib.svg",
+      "status": 200,
+      "sha256": "684946ee4c92d78733ec7aa5a351097316714665333935075b71a9f375c711c7"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/red/nexus-tower.svg",
+      "status": 200,
+      "sha256": "0ee27ba9130a276b2ee73812886ed6a3db79b83e5d28194a98bf246eecffc5d8"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/red/nexus.svg",
+      "status": 200,
+      "sha256": "a40414d664df8ecf1b20e7c14dc68e77b0abf7ad6b55bd61da2459a41bfbd545"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/red/t1.svg",
+      "status": 200,
+      "sha256": "d23402eb9f82df31394dff822b073267b0f47035e4c6bd97d009a57f8eebd6f7"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/red/t2.svg",
+      "status": 200,
+      "sha256": "73fa4a3ac107513c1fad344dfe395d59df0bf29248662f26034ff6ac91888a28"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "assets/structures/red/t3.svg",
+      "status": 200,
+      "sha256": "63de8f7f8f5ff8a5961a55147978cb3e0b914d7a41246441ff055473b8d1c438"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "config.js",
+      "status": 200,
+      "sha256": "de4c0daba7846c46bed46b28737498c0d7a3d726b1a13c641293b5f61a586931"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "css/base.css",
+      "status": 200,
+      "sha256": "cfb8b5d734831f467ca2c6ac356490bf861e1aa9d58cd2b66f3208cc83cf25f2"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "css/solo.css",
+      "status": 200,
+      "sha256": "4cad63bc690551f22df86b390bb9ee210db1167fc7a4221e570da76124167d21"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "css/arcade.css",
+      "status": 200,
+      "sha256": "70999c1e28da6c8f6b0d55260e476820036f3476bff4f0deb51aeaba9f96bf22"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "css/games.css",
+      "status": 200,
+      "sha256": "bc8263e35d3b495b85796981a18149fff611d373f09f10a1a140bc236f4762e1"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "data/lane-geometry.js",
+      "status": 200,
+      "sha256": "72684230d55756aa49db56227e5e3bf56774befa79b3cd97a0f43e59eecca07c"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "data/jungle-scenarios.js",
+      "status": 200,
+      "sha256": "92bdf8bd802900e034be78fe86cff4842214b895374b946e325ddfdea5e0a292"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "data/jungle-structures.js",
+      "status": 200,
+      "sha256": "9d26b859ca41b0c0d8a6f6dd0bf31cc32ac81dd06760b736ddcf6b8035fe4127"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "data/scenario-state-model.js",
+      "status": 200,
+      "sha256": "175f54e8179dc65b1d683b39139fb92571dc485a521327a1f91702a07fe580b7"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "js/games/jungle-gap.js",
+      "status": 200,
+      "sha256": "bba99f1993011948066d14a8ded844616eaf6c62f471180974098eef44c63c28"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "index.html",
+      "status": 200,
+      "sha256": "d7f22b1c690f1d63b938a3aed5f242859f8793f44fab3a2fe4cd839e5230d03a"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "js/solo-bootstrap.js",
+      "status": 200,
+      "sha256": "5faf9a7f4d86f1fcd2a475c9b5996b5d0e45bfe2512d2830abd0e34085e33dac"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "js/jungle-solo.js",
+      "status": 200,
+      "sha256": "aa06448c46de1c0f223f156a35069cebd833a230542c4137e184d56d4bfab912"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "hub-unavailable.html",
+      "status": 200,
+      "sha256": "99fa80d7395110816ed398712a316465554cc1cf6ea6d00e932275c803048d86"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "js/map-debug.js",
+      "status": 200,
+      "sha256": "4dd906189c68512aee8482250f392321a20e4b881616c372abb560a42dcbaf91"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "licenses/Lucide-ISC.txt",
+      "status": 200,
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "licenses/Portuguese-MPL-2.0.txt",
+      "status": 200,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "licenses/PeerJS-MIT.txt",
+      "status": 200,
+      "sha256": "9407807dba7f47a79bfb3ac55759d63d77c9371ebd0616d5a093e97d3e810397"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "licenses/ChakraPetch-OFL.txt",
+      "status": 200,
+      "sha256": "13831d02389d917d22fcfa6c79f98f8acbf61d230add0e73a4d4dc5f3bfb9e56"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "licenses/PressStart2P-OFL.txt",
+      "status": 200,
+      "sha256": "705960c3281a5765ecc0b59bd4ed7ca59eed165748076bc2fc3e8fdbfeb944b0"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "licenses/ShareTechMono-OFL.txt",
+      "status": 200,
+      "sha256": "9d96f445b6e9c701428811d0177f894874f8d6f07ecc30d568c506542368f3ff"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "THIRD-PARTY.md",
+      "status": 200,
+      "sha256": "4a205aa24a24349fc59f1f07585cfdb7175aa4e1b8453889e786be406f5a4c56"
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "file": "licenses/SpaceGrotesk-OFL.txt",
+      "status": 200,
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72"
+    }
+  ],
+  "pages": [
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "site": "https://party-games-hub-jorge.pages.dev",
+      "width": 360,
+      "height": 800,
+      "overflow": false
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "site": "https://jungle-gap-jorge.pages.dev",
+      "width": 360,
+      "height": 800,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "localRequests": [],
+  "failed": []
+}

@@ -1,0 +1,301 @@
+{
+  "cases": [
+    {
+      "id": "wordbomb",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "id": "termo",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "id": "riftle",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "id": "jungle",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "id": "stop",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "id": "fake",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "id": "reflex",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "id": "wordbomb",
+      "width": 1536,
+      "height": 864,
+      "overflow": false
+    },
+    {
+      "id": "termo",
+      "width": 1536,
+      "height": 864,
+      "overflow": false
+    },
+    {
+      "id": "riftle",
+      "width": 1536,
+      "height": 864,
+      "overflow": false
+    },
+    {
+      "id": "jungle",
+      "width": 1536,
+      "height": 864,
+      "overflow": false
+    },
+    {
+      "id": "stop",
+      "width": 1536,
+      "height": 864,
+      "overflow": false
+    },
+    {
+      "id": "fake",
+      "width": 1536,
+      "height": 864,
+      "overflow": false
+    },
+    {
+      "id": "reflex",
+      "width": 1536,
+      "height": 864,
+      "overflow": false
+    },
+    {
+      "id": "wordbomb",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "id": "termo",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "id": "riftle",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "id": "jungle",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "id": "stop",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "id": "fake",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "id": "reflex",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "id": "wordbomb",
+      "width": 1280,
+      "height": 720,
+      "overflow": false
+    },
+    {
+      "id": "termo",
+      "width": 1280,
+      "height": 720,
+      "overflow": false
+    },
+    {
+      "id": "riftle",
+      "width": 1280,
+      "height": 720,
+      "overflow": false
+    },
+    {
+      "id": "jungle",
+      "width": 1280,
+      "height": 720,
+      "overflow": false
+    },
+    {
+      "id": "stop",
+      "width": 1280,
+      "height": 720,
+      "overflow": false
+    },
+    {
+      "id": "fake",
+      "width": 1280,
+      "height": 720,
+      "overflow": false
+    },
+    {
+      "id": "reflex",
+      "width": 1280,
+      "height": 720,
+      "overflow": false
+    },
+    {
+      "id": "wordbomb",
+      "width": 430,
+      "height": 932,
+      "overflow": false
+    },
+    {
+      "id": "termo",
+      "width": 430,
+      "height": 932,
+      "overflow": false
+    },
+    {
+      "id": "riftle",
+      "width": 430,
+      "height": 932,
+      "overflow": false
+    },
+    {
+      "id": "jungle",
+      "width": 430,
+      "height": 932,
+      "overflow": false
+    },
+    {
+      "id": "stop",
+      "width": 430,
+      "height": 932,
+      "overflow": false
+    },
+    {
+      "id": "fake",
+      "width": 430,
+      "height": 932,
+      "overflow": false
+    },
+    {
+      "id": "reflex",
+      "width": 430,
+      "height": 932,
+      "overflow": false
+    },
+    {
+      "id": "wordbomb",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "id": "termo",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "id": "riftle",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "id": "jungle",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "id": "stop",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "id": "fake",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "id": "reflex",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "id": "wordbomb",
+      "width": 360,
+      "height": 800,
+      "overflow": false
+    },
+    {
+      "id": "termo",
+      "width": 360,
+      "height": 800,
+      "overflow": false
+    },
+    {
+      "id": "riftle",
+      "width": 360,
+      "height": 800,
+      "overflow": false
+    },
+    {
+      "id": "jungle",
+      "width": 360,
+      "height": 800,
+      "overflow": false
+    },
+    {
+      "id": "stop",
+      "width": 360,
+      "height": 800,
+      "overflow": false
+    },
+    {
+      "id": "fake",
+      "width": 360,
+      "height": 800,
+      "overflow": false
+    },
+    {
+      "id": "reflex",
+      "width": 360,
+      "height": 800,
+      "overflow": false
+    }
+  ],
+  "soloViewports": 7,
+  "soloFlows": 7,
+  "errors": []
+}

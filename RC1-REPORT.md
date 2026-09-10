@@ -1,6 +1,6 @@
 # Party Games Hub · relatório RC1
 
-Versão: **1.0.0-rc.1**. Status: **gates locais concluídos; validação pública pendente**.
+Versão: **1.0.0-rc.1**. Status: **PARTY_GAMES_HUB_RC1: DEPLOYED_FOR_PRIVATE_BETA**.
 
 ## Propriedade e publicação
 
@@ -8,9 +8,9 @@ Versão: **1.0.0-rc.1**. Status: **gates locais concluídos; validação públic
 - Autoria Git: `Jorge Tavares <ejorgeotavares@gmail.com>`.
 - Cloudflare: `Ejorgeotavares@gmail.com's Account`, ID `614183ed5a4431a0d8710bcc06f9254f`.
 - Projetos Pages: `party-games-hub-jorge` e `jungle-gap-jorge`, ambos nessa conta.
-- Repositório previsto: `https://github.com/thisisjorge/party-games-hub` (privado).
+- Repositório: `https://github.com/thisisjorge/party-games-hub` (privado).
 - Endereços dos projetos: `https://party-games-hub-jorge.pages.dev` e `https://jungle-gap-jorge.pages.dev`.
-- Ponto de segurança: `19ffeaf`, tag `pre-rc1-final-pass`. Tag final prevista: `rc1-private-beta`.
+- Ponto de segurança: `19ffeaf`, tag `pre-rc1-final-pass`. Tag final: `rc1-private-beta`.
 
 ## Mapa
 
@@ -52,7 +52,9 @@ As avaliações de diversão são hipóteses para validar com os amigos, não re
 - Responsividade: **49 layouts** (7 jogos × 7 telas), mais **7 sequências solo completas**. Telas: 1920×1080, 1536×864, 1366×768, 1280×720, 430×932, 390×844 e 360×800, sem zoom-out.
 - Multiplayer local com internet: **3 participantes WebRTC reais**, todos os sete jogos até resultado/lobby, placares sincronizados, revanche, Party Mix de 5 jogos, recompensa diária idempotente, saída e reconexão. Nenhum erro de JavaScript capturado.
 - Standalone: 5 decisões, vereditos, resultado e compartilhamento determinístico. Os cinco arquivos centrais são comparados byte a byte no build do Hub e do Solo.
-- Testes públicos: pendentes da primeira implantação.
+- **Produção: PASS.** As duas URLs reais passaram. Hub: sete jogos com três participantes, ação principal, resultado, placares, revanche, Party Mix, reconexão e saídas. Solo: sete fluxos de cinco decisões com compartilhamento determinístico. Responsividade: 49 layouts públicos. Personagens, READY, chat e reações também passaram.
+- **Integridade pública: 131 arquivos** comparados ao manifesto SHA-256; seis aberturas desktop/mobile, zero arquivos necessários ausentes, zero chamadas localhost e zero erros de JS.
+- Deploy Hub: `e8425a24` · https://e8425a24.party-games-hub-jorge.pages.dev . Deploy Jungle: `467add5f` · https://467add5f.jungle-gap-jorge.pages.dev . Ambos usam a aplicação do commit `77076ea`; o commit final da tag acrescenta relatórios e suítes de verificação pública, sem alterar a aplicação publicada.
 
 As suítes avançam relógios pelo hook local de QA para validar as transições sem esperar a duração inteira. Teste de payload privado significa ausência de resposta antecipada nas mensagens públicas, não proteção contra inspeção do código/host.
 
@@ -62,4 +64,4 @@ Cliente que perde a conexão e retorna provoca cancelamento seguro da rodada atu
 
 PeerJS Cloud permanece como sinalizador. Não há TURN privado nem garantia para NAT/VPN restritivos; os contextos testados compartilham a mesma máquina/rede. O beta com amigos em redes diferentes é a próxima validação real. Perfis e progresso são locais ao navegador. O host e o código distribuído são inspecionáveis. Não há autenticação central, ranking competitivo ou garantia antitrapaça. Consulte `DEPLOY.md` para infraestrutura opcional e rollback.
 
-Sem bloqueador P0/P1 conhecido nos testes locais. A aprovação final para beta depende do smoke test das duas URLs públicas.
+Sem bloqueador P0/P1 conhecido nos testes locais e públicos executados. Build congelada para beta privado. Os dois deploys pertencem à conta Cloudflare do usuário; o repositório privado pertence a `thisisjorge`. Não foi criado recurso na conta da pessoa dona do notebook.
