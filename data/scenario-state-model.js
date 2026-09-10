@@ -49,6 +49,11 @@
     for(const [id,o] of Object.entries(state.objectives||{})){
       out.objectives[id]={state:o.state};
       if(Number.isFinite(o.seconds))out.objectives[id].seconds=o.seconds;
+      if(id==='mark'){
+        const t=o.target;
+        if(!t||!['camp','objective','actor'].includes(t.kind)||typeof t.id!=='string')throw new Error('Kindred mark requires an explicit camp, objective or actor target');
+        out.objectives[id].target={kind:t.kind,id:t.id};
+      }
     }
     return out;
   }
@@ -102,7 +107,8 @@
       }
       actor.cardLabel=LABELS[actor.state];
       if(actor.positionMode==='EXPLICIT'){
-        const dest=DESTINATIONS[actor.currentPosition]||(/^(top|mid|bot)/.exec(actor.currentPosition||'')||[])[1];
+        const camp=G.camps[actor.currentPosition];
+        const dest=camp?(camp.label+' '+(camp.side==='blue'?'aliado':'inimigo')):DESTINATIONS[actor.currentPosition]||(/^(top|mid|bot)/.exec(actor.currentPosition||'')||[])[1];
         if(dest)actor.cardLabel+=' · '+dest;
       }
       if(actor.lastSeen)actor.cardLabel+=' ('+(actor.lastSeen.secondsAgo===undefined?'tempo desconhecido':actor.lastSeen.secondsAgo+'s')+')';
@@ -115,12 +121,31 @@
     for(const a of vm.mapActors.filter(a=>a.positionMode==='EXPLICIT')){
       const key=a.renderX+','+a.renderY;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(a);
     }
-    for(const group of groups.values())if(group.length>1)group.sort((a,b)=>a.id.localeCompare(b.id)).forEach((a,i)=>{const angle=2*Math.PI*i/group.length;a.renderX=Math.max(.03,Math.min(.97,a.renderX+Math.cos(angle)*.038));a.renderY=Math.max(.03,Math.min(.97,a.renderY+Math.sin(angle)*.038));});
-    const objectivePositions={dragon:'dragonPitAnchor',baron:'baronPitAnchor',herald:'heraldPitAnchor',grubs:'grubsAnchor',scuttleTop:'topScuttleAnchor',scuttleBot:'botScuttleAnchor',mark:'grompRed'};
+    for(const group of groups.values())if(group.length>1)group.sort((a,b)=>a.id.localeCompare(b.id)).forEach((a,i)=>{const slots=G.formationSlots[a.currentPosition];if(slots?.length>=group.length){a.renderX=slots[i].x;a.renderY=slots[i].y;}else{const angle=2*Math.PI*i/group.length;a.renderX=Math.max(.03,Math.min(.97,a.renderX+Math.cos(angle)*.038));a.renderY=Math.max(.03,Math.min(.97,a.renderY+Math.sin(angle)*.038));}});
+    const objectivePositions={dragon:'dragonPitAnchor',baron:'baronPitAnchor',herald:'heraldPitAnchor',grubs:'grubsAnchor',scuttleTop:'topScuttleAnchor',scuttleBot:'botScuttleAnchor'};
     for(const [id,o] of Object.entries(state.objectives)){
+      if(id==='mark')continue;
       const p=G.resolvePosition(objectivePositions[id]);if(!p)throw new Error('Unknown objective '+id);
       if(!['UP','SPAWNING','DEAD','UNKNOWN'].includes(o.state))throw new Error('Invalid objective state');
       vm.objectives[id]={...o,x:p.x,y:p.y};
+    }
+    const mark=state.objectives.mark;
+    if(mark){
+      if(!['UP','SPAWNING','DEAD','UNKNOWN'].includes(mark.state))throw new Error('Invalid mark state');
+      const t=mark.target;let p,label;
+      if(t.kind==='camp'){
+        p=G.camps[t.id];
+        if(p)label=p.label+' '+(p.side==='blue'?'aliado':'inimigo');
+      }else if(t.kind==='objective'){
+        p=G.resolvePosition(objectivePositions[t.id]);
+        label={dragon:'Dragão',baron:'Baron',herald:'Arauto',grubs:'Vastilarvas',scuttleTop:'Aronguejo top',scuttleBot:'Aronguejo bot'}[t.id];
+      }else{
+        const a=vm.actors[t.id];
+        // A mark is not vision: never reveal a hidden actor's current or private position.
+        if(a){p={x:a.renderX,y:a.renderY};label=a.champion+(a.renderX===null?' · sem posição atual conhecida':'');}
+      }
+      if(!p||!label)throw new Error('Invalid Kindred target '+t.kind+': '+t.id);
+      vm.objectives.mark={...mark,x:p.x,y:p.y,targetLabel:label};
     }
     return vm;
   }

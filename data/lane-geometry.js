@@ -32,16 +32,21 @@
   function normalOnLane(lane,t){const p=tangentOnLane(lane,t);return {x:-p.y,y:p.x};}
   const points={
     blueBase:{x:.14,y:.84},redBase:{x:.86,y:.14},
-    topRiver:{x:.29,y:.27},midRiver:{x:.50,y:.49},botRiver:{x:.74,y:.73},
+    topRiver:{x:320/1254,y:340/1254},midRiver:{x:.50,y:.49},botRiver:{x:930/1254,y:882/1254},
     // Measured centers on the 1254 x 1254 terrain; pit anchors are not river anchors.
     heraldPitAnchor:{x:438/1254,y:394/1254},baronPitAnchor:{x:438/1254,y:394/1254},grubsAnchor:{x:438/1254,y:394/1254},
-    dragonPitAnchor:{x:829/1254,y:863/1254},topScuttleAnchor:{x:332/1254,y:452/1254},botScuttleAnchor:{x:917/1254,y:944/1254},
-    grubsEntrance:{x:.29,y:.39},baronEntrance:{x:.29,y:.39},dragonEntrance:{x:.62,y:.65},
-    blueTopJungle:{x:.27,y:.48},blueBotJungle:{x:.45,y:.73},redTopJungle:{x:.56,y:.28},redBotJungle:{x:.74,y:.50},
-    blueTopRiverEntrance:{x:.29,y:.40},blueBotRiverEntrance:{x:.43,y:.59},redTopRiverEntrance:{x:.57,y:.40},redBotRiverEntrance:{x:.72,y:.59},
-    redBuffBlue:{x:.28,y:.47},wolvesBlue:{x:.27,y:.58},raptorsBlue:{x:.41,y:.61},blueBuffBlue:{x:.43,y:.74},grompBlue:{x:.31,y:.70},krugsBlue:{x:.43,y:.81},
-    blueBuffRed:{x:.57,y:.25},grompRed:{x:.70,y:.29},wolvesRed:{x:.69,y:.39},raptorsRed:{x:.59,y:.38},redBuffRed:{x:.73,y:.50},krugsRed:{x:.82,y:.56}
+    dragonPitAnchor:{x:829/1254,y:863/1254},topScuttleAnchor:{x:332/1254,y:452/1254},botScuttleAnchor:{x:902/1254,y:818/1254},
+    grubsEntrance:{x:390/1254,y:450/1254},baronEntrance:{x:390/1254,y:450/1254},dragonEntrance:{x:891/1254,y:848/1254},
+    blueTopJungle:{x:.27,y:.48},blueBotJungle:{x:581/1254,y:859/1254},redTopJungle:{x:664/1254,y:389/1254},redBotJungle:{x:918/1254,y:698/1254},
+    blueTopRiverEntrance:{x:430/1254,y:530/1254},blueBotRiverEntrance:{x:.43,y:.59},redTopRiverEntrance:{x:.57,y:.40},redBotRiverEntrance:{x:.72,y:.59}
+
   };
+  // Camp IDs name the owning SIDE, not the buff color. Blue team's blue quadrant is top-left.
+  // Native terrain centers; each paired clearing is a 180-degree counterpart.
+  const campTypes={gromp:{label:'Gromp',color:'#baa4d9'},blue:{label:'Blue',color:'#71c7ec'},wolves:{label:'Lobos',color:'#becbd0'},raptors:{label:'Acuâminas',color:'#ce9d8c'},red:{label:'Red',color:'#e1a077'},krugs:{label:'Krugs',color:'#bcb18f'}};
+  const campPixels={grompBlue:[235,468,'gromp'],blueBuffBlue:[332,585,'blue'],wolvesBlue:[339,704,'wolves'],raptorsBlue:[605,805,'raptors'],redBuffBlue:[655,905,'red'],krugsBlue:[712,1022,'krugs'],grompRed:[1019,786,'gromp'],blueBuffRed:[922,669,'blue'],wolvesRed:[915,550,'wolves'],raptorsRed:[649,449,'raptors'],redBuffRed:[599,349,'red'],krugsRed:[542,232,'krugs']};
+  const camps=Object.fromEntries(Object.entries(campPixels).map(([id,[x,y,kind]])=>[id,{id,kind,...campTypes[kind],side:id.endsWith('Blue')?'blue':'red',x:x/1254,y:y/1254}]));
+  for(const [id,camp] of Object.entries(camps))points[id]={x:camp.x,y:camp.y};
   points.heraldPit=points.heraldPitAnchor;points.baronPit=points.baronPitAnchor;points.grubsPit=points.grubsAnchor;points.dragonPit=points.dragonPitAnchor;
   // Semantic lane anchors share the same calibrated paths as normal lane play.
   for(const lane of Object.keys(paths)){
@@ -50,11 +55,12 @@
       if(lane==='bot')for(const role of ['ADC','Support'])points[lane+suffix+role]=points[lane+suffix];
     }
   }
+  const formationSlots={blueTopJungle:[{x:342/1254,y:576/1254},{x:298/1254,y:644/1254}]};
   function resolvePosition(position){
     if(typeof position==='string')return points[position]||null;
     if(position && Number.isFinite(position.x) && Number.isFinite(position.y) && position.x>=0 && position.x<=1 && position.y>=0 && position.y<=1)return {x:position.x,y:position.y};
     return null;
   }
   window.PGH_JUNGLE_MAP_POINTS=points;
-  window.PGH_LANE_GEOMETRY={LANE_PATHS,TOWERS,pointOnLane,tangentOnLane,normalOnLane,resolvePosition};
+  window.PGH_LANE_GEOMETRY={LANE_PATHS,TOWERS,pointOnLane,tangentOnLane,normalOnLane,resolvePosition,camps,formationSlots};
 })();

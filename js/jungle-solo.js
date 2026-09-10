@@ -29,7 +29,7 @@ function home(){refreshMenu();run++;state=null;g.cleanup();$('solo-session').hid
 window.JungleSolo={act,start,deck,get state(){return state;},get result(){return lastResult;}};
 const preview=g.createInitialState(['solo'],{scenarios:[PGH_JUNGLE[41]]});GameManager.publicState=g.getPublicState(preview);g.render(GameManager.publicState);$('solo-preview').innerHTML=document.querySelector('.jg-map')?.innerHTML||'';$('game-root').innerHTML='';g.cleanup();
 if(PGH_CONFIG.hubUrl)$('solo-hub').href=PGH_CONFIG.hubUrl;
-refreshMenu();$('solo-practice').onclick=()=>start(randomSeed(),'training');$('solo-start').onclick=()=>start(randomSeed(),'training');$('solo-daily').onclick=()=>start(daySeed(),'daily');$('solo-exit').onclick=home;
+$('solo-round-seconds').textContent=g.roundSeconds;refreshMenu();$('solo-practice').onclick=()=>start(randomSeed(),'training');$('solo-start').onclick=()=>start(randomSeed(),'training');$('solo-daily').onclick=()=>start(daySeed(),'daily');$('solo-exit').onclick=home;
 const challenge=new URLSearchParams(location.search).get('challenge');if(challenge&&/^[a-zA-Z0-9-]{1,40}$/.test(challenge))start(challenge,'challenge');
 setInterval(()=>{if(state?.phase==='question'){g.hostTick(state,helpers());settle();g.tickUI(GameManager.publicState);}},100);
 })();

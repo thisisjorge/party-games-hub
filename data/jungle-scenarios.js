@@ -1029,7 +1029,7 @@ window.PGH_JUNGLE = [
           "team": "blue",
           "homeLane": "jungle",
           "state": "ACTIVE",
-          "currentPosition": "redTopJungle"
+          "currentPosition": "redBotJungle"
         },
         "red-jungle": {
           "champion": "JG INIMIGO",
@@ -1053,6 +1053,7 @@ window.PGH_JUNGLE = [
       },
       "objectives": {
         "mark": {
+          "target": {"kind": "camp", "id": "grompRed"},
           "state": "UP"
         }
       },
@@ -1379,7 +1380,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "JG INIMIGO",
+          "champion": "Udyr",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -2695,7 +2696,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueTopJungle"
         },
         "red-jungle": {
-          "champion": "JG INIMIGO",
+          "champion": "Sejuani",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
@@ -4253,7 +4254,7 @@ window.PGH_JUNGLE = [
           "team": "blue",
           "homeLane": "jungle",
           "state": "ACTIVE",
-          "currentPosition": "blueTopJungle"
+          "currentPosition": "redBotRiverEntrance"
         },
         "red-jungle": {
           "champion": "Evelynn",
@@ -5847,7 +5848,7 @@ window.PGH_JUNGLE = [
           "currentPosition": "blueBotJungle"
         },
         "red-jungle": {
-          "champion": "JG INIMIGO",
+          "champion": "Xin Zhao",
           "role": "JUNGLE",
           "team": "red",
           "homeLane": "jungle",
