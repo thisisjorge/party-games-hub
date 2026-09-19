@@ -1,6 +1,10 @@
 # Componentes e créditos
 
-Este projeto de fãs é independente e não é associado à Riot Games. Os nomes e referências de League of Legends pertencem aos respectivos titulares. O minimapa de referência foi fornecido pelo autor do projeto; o terreno foi derivado dele para esta experiência de treino. As estruturas são SVGs do projeto.
+Este projeto de fãs é independente e não é associado à Riot Games. Conforme a política oficial Riot Games Legal Jibber-Jabber:
+
+> *"Jungle Gap isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc."*
+
+Os nomes e referências de League of Legends pertencem aos respectivos titulares. O minimapa de referência foi fornecido pelo autor do projeto; o terreno foi derivado dele para esta experiência de treino. As estruturas são SVGs do projeto.
 
 | Componente | Origem | Licença |
 | --- | --- | --- |
